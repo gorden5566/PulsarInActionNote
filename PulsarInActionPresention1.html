@@ -1,0 +1,1008 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style media="screen">body,html{scroll-snap-points-y:repeat(100%);background:#000;height:100%;margin:0;overflow:auto;scroll-snap-type:y mandatory;scroll-snap-type:mandatory}body>svg{display:block;height:100%;scroll-snap-align:center center;width:100%}</style><style>@charset "UTF-8";@import 'https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css';@import url(https://fonts.bunny.net/css?family=charm:700);svg>foreignObject>section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center}svg>foreignObject>section:after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}svg>foreignObject>section:not([data-marpit-pagination]):after{display:none}/* Normalization */svg>foreignObject>section :is(h1,marp-h1){font-size:2em;margin:0.67em 0}svg>foreignObject>section video::-webkit-media-controls{will-change:transform}@page{size:1280px 720px;margin:0}@media print{body,html{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}svg>foreignObject>section{page-break-before:always;break-before:page}svg>foreignObject>section,svg>foreignObject>section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;transition:none!important}svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}
+
+/*!
+ * Marp default theme.
+ *
+ * @theme default
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */svg>foreignObject>section{--color-prettylights-syntax-comment:#6e7781;--color-prettylights-syntax-constant:#0550ae;--color-prettylights-syntax-entity:#8250df;--color-prettylights-syntax-storage-modifier-import:#24292f;--color-prettylights-syntax-entity-tag:#116329;--color-prettylights-syntax-keyword:#cf222e;--color-prettylights-syntax-string:#0a3069;--color-prettylights-syntax-variable:#953800;--color-prettylights-syntax-brackethighlighter-unmatched:#82071e;--color-prettylights-syntax-invalid-illegal-text:#f6f8fa;--color-prettylights-syntax-invalid-illegal-bg:#82071e;--color-prettylights-syntax-carriage-return-text:#f6f8fa;--color-prettylights-syntax-carriage-return-bg:#cf222e;--color-prettylights-syntax-string-regexp:#116329;--color-prettylights-syntax-markup-list:#3b2300;--color-prettylights-syntax-markup-heading:#0550ae;--color-prettylights-syntax-markup-italic:#24292f;--color-prettylights-syntax-markup-bold:#24292f;--color-prettylights-syntax-markup-deleted-text:#82071e;--color-prettylights-syntax-markup-deleted-bg:#ffebe9;--color-prettylights-syntax-markup-inserted-text:#116329;--color-prettylights-syntax-markup-inserted-bg:#dafbe1;--color-prettylights-syntax-markup-changed-text:#953800;--color-prettylights-syntax-markup-changed-bg:#ffd8b5;--color-prettylights-syntax-markup-ignored-text:#eaeef2;--color-prettylights-syntax-markup-ignored-bg:#0550ae;--color-prettylights-syntax-meta-diff-range:#8250df;--color-prettylights-syntax-brackethighlighter-angle:#57606a;--color-prettylights-syntax-sublimelinter-gutter-mark:#8c959f;--color-prettylights-syntax-constant-other-reference-link:#0a3069;--color-fg-default:#24292f;--color-fg-muted:#57606a;--color-fg-subtle:#6e7781;--color-canvas-default:#fff;--color-canvas-subtle:#f6f8fa;--color-border-default:#d0d7de;--color-border-muted:#d8dee4;--color-neutral-muted:rgba(175,184,193,.2);--color-accent-fg:#0969da;--color-accent-emphasis:#0969da;--color-attention-subtle:#fff8c5;--color-danger-fg:#cf222e;color-scheme:light}svg>foreignObject>section:where(.invert){--color-prettylights-syntax-comment:#8b949e;--color-prettylights-syntax-constant:#79c0ff;--color-prettylights-syntax-entity:#d2a8ff;--color-prettylights-syntax-storage-modifier-import:#c9d1d9;--color-prettylights-syntax-entity-tag:#7ee787;--color-prettylights-syntax-keyword:#ff7b72;--color-prettylights-syntax-string:#a5d6ff;--color-prettylights-syntax-variable:#ffa657;--color-prettylights-syntax-brackethighlighter-unmatched:#f85149;--color-prettylights-syntax-invalid-illegal-text:#f0f6fc;--color-prettylights-syntax-invalid-illegal-bg:#8e1519;--color-prettylights-syntax-carriage-return-text:#f0f6fc;--color-prettylights-syntax-carriage-return-bg:#b62324;--color-prettylights-syntax-string-regexp:#7ee787;--color-prettylights-syntax-markup-list:#f2cc60;--color-prettylights-syntax-markup-heading:#1f6feb;--color-prettylights-syntax-markup-italic:#c9d1d9;--color-prettylights-syntax-markup-bold:#c9d1d9;--color-prettylights-syntax-markup-deleted-text:#ffdcd7;--color-prettylights-syntax-markup-deleted-bg:#67060c;--color-prettylights-syntax-markup-inserted-text:#aff5b4;--color-prettylights-syntax-markup-inserted-bg:#033a16;--color-prettylights-syntax-markup-changed-text:#ffdfb6;--color-prettylights-syntax-markup-changed-bg:#5a1e02;--color-prettylights-syntax-markup-ignored-text:#c9d1d9;--color-prettylights-syntax-markup-ignored-bg:#1158c7;--color-prettylights-syntax-meta-diff-range:#d2a8ff;--color-prettylights-syntax-brackethighlighter-angle:#8b949e;--color-prettylights-syntax-sublimelinter-gutter-mark:#484f58;--color-prettylights-syntax-constant-other-reference-link:#a5d6ff;--color-fg-default:#c9d1d9;--color-fg-muted:#8b949e;--color-fg-subtle:#6e7681;--color-canvas-default:#0d1117;--color-canvas-subtle:#161b22;--color-border-default:#30363d;--color-border-muted:#21262d;--color-neutral-muted:hsla(215,8%,47%,.4);--color-accent-fg:#58a6ff;--color-accent-emphasis:#1f6feb;--color-attention-subtle:rgba(187,128,9,.15);--color-danger-fg:#f85149;color-scheme:dark}svg>foreignObject>section{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;background-color:var(--color-canvas-default);color:var(--color-fg-default);font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Noto Sans,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;margin:0}svg>foreignObject>section{--marpit-root-font-size:16px}svg>foreignObject>section :is(h1,marp-h1):hover .anchor .octicon-link:before,svg>foreignObject>section :is(h2,marp-h2):hover .anchor .octicon-link:before,svg>foreignObject>section :is(h3,marp-h3):hover .anchor .octicon-link:before,svg>foreignObject>section :is(h4,marp-h4):hover .anchor .octicon-link:before,svg>foreignObject>section :is(h5,marp-h5):hover .anchor .octicon-link:before,svg>foreignObject>section :is(h6,marp-h6):hover .anchor .octicon-link:before{background-color:currentColor;content:" ";display:inline-block;height:16px;-webkit-mask-image:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>');mask-image:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>');width:16px}svg>foreignObject>section details,svg>foreignObject>section figcaption,svg>foreignObject>section figure{display:block}svg>foreignObject>section summary{display:list-item}svg>foreignObject>section [hidden]{display:none!important}svg>foreignObject>section a{background-color:transparent;color:var(--color-accent-fg);text-decoration:none}svg>foreignObject>section abbr[title]{border-bottom:none;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}svg>foreignObject>section b,svg>foreignObject>section strong{font-weight:var(--base-text-weight-semibold,600)}svg>foreignObject>section dfn{font-style:italic}svg>foreignObject>section :is(h1,marp-h1){border-bottom:1px solid var(--color-border-muted);font-size:2em;font-weight:var(--base-text-weight-semibold,600);margin:.67em 0;padding-bottom:.3em}svg>foreignObject>section mark{background-color:var(--color-attention-subtle);color:var(--color-fg-default)}svg>foreignObject>section small{font-size:90%}svg>foreignObject>section sub,svg>foreignObject>section sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}svg>foreignObject>section sub{bottom:-.25em}svg>foreignObject>section sup{top:-.5em}svg>foreignObject>section img{background-color:var(--color-canvas-default);border-style:none;box-sizing:content-box;max-width:100%}svg>foreignObject>section :is(pre,marp-pre),svg>foreignObject>section code,svg>foreignObject>section kbd,svg>foreignObject>section samp{font-family:monospace;font-size:1em}svg>foreignObject>section figure{margin:1em 40px}svg>foreignObject>section hr{background:transparent;background-color:var(--color-border-default);border:0;box-sizing:content-box;height:.25em;margin:24px 0;overflow:hidden;padding:0}svg>foreignObject>section input{font:inherit;font-family:inherit;font-size:inherit;line-height:inherit;margin:0;overflow:visible}svg>foreignObject>section [type=button],svg>foreignObject>section [type=reset],svg>foreignObject>section [type=submit]{-webkit-appearance:button}svg>foreignObject>section [type=checkbox],svg>foreignObject>section [type=radio]{box-sizing:border-box;padding:0}svg>foreignObject>section [type=number]::-webkit-inner-spin-button,svg>foreignObject>section [type=number]::-webkit-outer-spin-button{height:auto}svg>foreignObject>section [type=search]::-webkit-search-cancel-button,svg>foreignObject>section [type=search]::-webkit-search-decoration{-webkit-appearance:none}svg>foreignObject>section ::-webkit-input-placeholder{color:inherit;opacity:.54}svg>foreignObject>section ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}svg>foreignObject>section a:hover{text-decoration:underline}svg>foreignObject>section ::-moz-placeholder{color:var(--color-fg-subtle);opacity:1}svg>foreignObject>section ::placeholder{color:var(--color-fg-subtle);opacity:1}svg>foreignObject>section hr:after,svg>foreignObject>section hr:before{content:"";display:table}svg>foreignObject>section hr:after{clear:both}svg>foreignObject>section table{border-collapse:collapse;border-spacing:0;display:block;max-width:100%;overflow:auto;width:-moz-max-content;width:max-content}svg>foreignObject>section td,svg>foreignObject>section th{padding:0}svg>foreignObject>section details summary{cursor:pointer}svg>foreignObject>section details:not([open])>:not(summary){display:none!important}svg>foreignObject>section [role=button]:focus,svg>foreignObject>section a:focus,svg>foreignObject>section input[type=checkbox]:focus,svg>foreignObject>section input[type=radio]:focus{box-shadow:none;outline:2px solid var(--color-accent-fg);outline-offset:-2px}svg>foreignObject>section [role=button]:focus:not(:focus-visible),svg>foreignObject>section a:focus:not(:focus-visible),svg>foreignObject>section input[type=checkbox]:focus:not(:focus-visible),svg>foreignObject>section input[type=radio]:focus:not(:focus-visible){outline:1px solid transparent}svg>foreignObject>section [role=button]:focus-visible,svg>foreignObject>section a:focus-visible,svg>foreignObject>section input[type=checkbox]:focus-visible,svg>foreignObject>section input[type=radio]:focus-visible{box-shadow:none;outline:2px solid var(--color-accent-fg);outline-offset:-2px}svg>foreignObject>section a:not([class]):focus,svg>foreignObject>section a:not([class]):focus-visible,svg>foreignObject>section input[type=checkbox]:focus,svg>foreignObject>section input[type=checkbox]:focus-visible,svg>foreignObject>section input[type=radio]:focus,svg>foreignObject>section input[type=radio]:focus-visible{outline-offset:0}svg>foreignObject>section kbd{background-color:var(--color-canvas-subtle);border-bottom-color:var(--color-neutral-muted);border:1px solid var(--color-neutral-muted);border-radius:6px;box-shadow:inset 0 -1px 0 var(--color-neutral-muted);color:var(--color-fg-default);display:inline-block;font:11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;line-height:10px;padding:3px 5px;vertical-align:middle}svg>foreignObject>section :is(h1,marp-h1),svg>foreignObject>section :is(h2,marp-h2),svg>foreignObject>section :is(h3,marp-h3),svg>foreignObject>section :is(h4,marp-h4),svg>foreignObject>section :is(h5,marp-h5),svg>foreignObject>section :is(h6,marp-h6){font-weight:var(--base-text-weight-semibold,600);line-height:1.25;margin-bottom:16px;margin-top:24px}svg>foreignObject>section :is(h2,marp-h2){border-bottom:1px solid var(--color-border-muted);font-size:1.5em;padding-bottom:.3em}svg>foreignObject>section :is(h2,marp-h2),svg>foreignObject>section :is(h3,marp-h3){font-weight:var(--base-text-weight-semibold,600)}svg>foreignObject>section :is(h3,marp-h3){font-size:1.25em}svg>foreignObject>section :is(h4,marp-h4){font-size:1em}svg>foreignObject>section :is(h4,marp-h4),svg>foreignObject>section :is(h5,marp-h5){font-weight:var(--base-text-weight-semibold,600)}svg>foreignObject>section :is(h5,marp-h5){font-size:.875em}svg>foreignObject>section :is(h6,marp-h6){color:var(--color-fg-muted);font-size:.85em;font-weight:var(--base-text-weight-semibold,600)}svg>foreignObject>section p{margin-bottom:10px;margin-top:0}svg>foreignObject>section blockquote{border-left:.25em solid var(--color-border-default);color:var(--color-fg-muted);margin:0;padding:0 1em}svg>foreignObject>section ol,svg>foreignObject>section ul{margin-bottom:0;margin-top:0;padding-left:2em}svg>foreignObject>section ol ol,svg>foreignObject>section ul ol{list-style-type:lower-roman}svg>foreignObject>section ol ol ol,svg>foreignObject>section ol ul ol,svg>foreignObject>section ul ol ol,svg>foreignObject>section ul ul ol{list-style-type:lower-alpha}svg>foreignObject>section dd{margin-left:0}svg>foreignObject>section :is(pre,marp-pre),svg>foreignObject>section code,svg>foreignObject>section samp,svg>foreignObject>section tt{font-family:ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;font-size:12px}svg>foreignObject>section :is(pre,marp-pre){word-wrap:normal;margin-bottom:0;margin-top:0}svg>foreignObject>section .octicon{fill:currentColor;display:inline-block;overflow:visible!important;vertical-align:text-bottom}svg>foreignObject>section input::-webkit-inner-spin-button,svg>foreignObject>section input::-webkit-outer-spin-button{-webkit-appearance:none;appearance:none;margin:0}svg>foreignObject>section:after,svg>foreignObject>section:before{
+  /* content:""; */display:table}svg>foreignObject>section:after{clear:both}svg>foreignObject>section>:first-child{margin-top:0!important}svg>foreignObject>section>:last-child{margin-bottom:0!important}svg>foreignObject>section a:not([href]){color:inherit;text-decoration:none}svg>foreignObject>section .absent{color:var(--color-danger-fg)}svg>foreignObject>section .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}svg>foreignObject>section .anchor:focus{outline:none}svg>foreignObject>section :is(pre,marp-pre),svg>foreignObject>section blockquote,svg>foreignObject>section details,svg>foreignObject>section dl,svg>foreignObject>section ol,svg>foreignObject>section p,svg>foreignObject>section table,svg>foreignObject>section ul{margin-bottom:16px;margin-top:0}svg>foreignObject>section blockquote>:first-child{margin-top:0}svg>foreignObject>section blockquote>:last-child{margin-bottom:0}svg>foreignObject>section :is(h1,marp-h1) .octicon-link,svg>foreignObject>section :is(h2,marp-h2) .octicon-link,svg>foreignObject>section :is(h3,marp-h3) .octicon-link,svg>foreignObject>section :is(h4,marp-h4) .octicon-link,svg>foreignObject>section :is(h5,marp-h5) .octicon-link,svg>foreignObject>section :is(h6,marp-h6) .octicon-link{color:var(--color-fg-default);vertical-align:middle;visibility:hidden}svg>foreignObject>section :is(h1,marp-h1):hover .anchor,svg>foreignObject>section :is(h2,marp-h2):hover .anchor,svg>foreignObject>section :is(h3,marp-h3):hover .anchor,svg>foreignObject>section :is(h4,marp-h4):hover .anchor,svg>foreignObject>section :is(h5,marp-h5):hover .anchor,svg>foreignObject>section :is(h6,marp-h6):hover .anchor{text-decoration:none}svg>foreignObject>section :is(h1,marp-h1):hover .anchor .octicon-link,svg>foreignObject>section :is(h2,marp-h2):hover .anchor .octicon-link,svg>foreignObject>section :is(h3,marp-h3):hover .anchor .octicon-link,svg>foreignObject>section :is(h4,marp-h4):hover .anchor .octicon-link,svg>foreignObject>section :is(h5,marp-h5):hover .anchor .octicon-link,svg>foreignObject>section :is(h6,marp-h6):hover .anchor .octicon-link{visibility:visible}svg>foreignObject>section :is(h1,marp-h1) code,svg>foreignObject>section :is(h1,marp-h1) tt,svg>foreignObject>section :is(h2,marp-h2) code,svg>foreignObject>section :is(h2,marp-h2) tt,svg>foreignObject>section :is(h3,marp-h3) code,svg>foreignObject>section :is(h3,marp-h3) tt,svg>foreignObject>section :is(h4,marp-h4) code,svg>foreignObject>section :is(h4,marp-h4) tt,svg>foreignObject>section :is(h5,marp-h5) code,svg>foreignObject>section :is(h5,marp-h5) tt,svg>foreignObject>section :is(h6,marp-h6) code,svg>foreignObject>section :is(h6,marp-h6) tt{font-size:inherit;padding:0 .2em}svg>foreignObject>section summary :is(h1,marp-h1),svg>foreignObject>section summary :is(h2,marp-h2),svg>foreignObject>section summary :is(h3,marp-h3),svg>foreignObject>section summary :is(h4,marp-h4),svg>foreignObject>section summary :is(h5,marp-h5),svg>foreignObject>section summary :is(h6,marp-h6){display:inline-block}svg>foreignObject>section summary :is(h1,marp-h1) .anchor,svg>foreignObject>section summary :is(h2,marp-h2) .anchor,svg>foreignObject>section summary :is(h3,marp-h3) .anchor,svg>foreignObject>section summary :is(h4,marp-h4) .anchor,svg>foreignObject>section summary :is(h5,marp-h5) .anchor,svg>foreignObject>section summary :is(h6,marp-h6) .anchor{margin-left:-40px}svg>foreignObject>section summary :is(h1,marp-h1),svg>foreignObject>section summary :is(h2,marp-h2){border-bottom:0;padding-bottom:0}svg>foreignObject>section ol.no-list,svg>foreignObject>section ul.no-list{list-style-type:none;padding:0}svg>foreignObject>section ol[type=a]{list-style-type:lower-alpha}svg>foreignObject>section ol[type=A]{list-style-type:upper-alpha}svg>foreignObject>section ol[type=i]{list-style-type:lower-roman}svg>foreignObject>section ol[type=I]{list-style-type:upper-roman}svg>foreignObject>section div>ol:not([type]),svg>foreignObject>section ol[type="1"]{list-style-type:decimal}svg>foreignObject>section ol ol,svg>foreignObject>section ol ul,svg>foreignObject>section ul ol,svg>foreignObject>section ul ul{margin-bottom:0;margin-top:0}svg>foreignObject>section li>p{margin-top:16px}svg>foreignObject>section li+li{margin-top:.25em}svg>foreignObject>section dl{padding:0}svg>foreignObject>section dl dt{font-size:1em;font-style:italic;font-weight:var(--base-text-weight-semibold,600);margin-top:16px;padding:0}svg>foreignObject>section dl dd{margin-bottom:16px;padding:0 16px}svg>foreignObject>section table th{font-weight:var(--base-text-weight-semibold,600)}svg>foreignObject>section table td,svg>foreignObject>section table th{border:1px solid var(--color-border-default);padding:6px 13px}svg>foreignObject>section table tr{background-color:var(--color-canvas-default);border-top:1px solid var(--color-border-muted)}svg>foreignObject>section table tr:nth-child(2n){background-color:var(--color-canvas-subtle)}svg>foreignObject>section table img{background-color:transparent}svg>foreignObject>section img[align=right]{padding-left:20px}svg>foreignObject>section img[align=left]{padding-right:20px}svg>foreignObject>section .emoji{background-color:transparent;max-width:none;vertical-align:text-top}svg>foreignObject>section :is(span,marp-span).frame,svg>foreignObject>section :is(span,marp-span).frame>:is(span,marp-span){display:block;overflow:hidden}svg>foreignObject>section :is(span,marp-span).frame>:is(span,marp-span){border:1px solid var(--color-border-default);float:left;margin:13px 0 0;padding:7px;width:auto}svg>foreignObject>section :is(span,marp-span).frame :is(span,marp-span) img{display:block;float:left}svg>foreignObject>section :is(span,marp-span).frame :is(span,marp-span) :is(span,marp-span){clear:both;color:var(--color-fg-default);display:block;padding:5px 0 0}svg>foreignObject>section :is(span,marp-span).align-center{clear:both;display:block;overflow:hidden}svg>foreignObject>section :is(span,marp-span).align-center>:is(span,marp-span){display:block;margin:13px auto 0;overflow:hidden;text-align:center}svg>foreignObject>section :is(span,marp-span).align-center :is(span,marp-span) img{margin:0 auto;text-align:center}svg>foreignObject>section :is(span,marp-span).align-right{clear:both;display:block;overflow:hidden}svg>foreignObject>section :is(span,marp-span).align-right>:is(span,marp-span){display:block;margin:13px 0 0;overflow:hidden;text-align:right}svg>foreignObject>section :is(span,marp-span).align-right :is(span,marp-span) img{margin:0;text-align:right}svg>foreignObject>section :is(span,marp-span).float-left{display:block;float:left;margin-right:13px;overflow:hidden}svg>foreignObject>section :is(span,marp-span).float-left :is(span,marp-span){margin:13px 0 0}svg>foreignObject>section :is(span,marp-span).float-right{display:block;float:right;margin-left:13px;overflow:hidden}svg>foreignObject>section :is(span,marp-span).float-right>:is(span,marp-span){display:block;margin:13px auto 0;overflow:hidden;text-align:right}svg>foreignObject>section code,svg>foreignObject>section tt{background-color:var(--color-neutral-muted);border-radius:6px;font-size:85%;margin:0;padding:.2em .4em;white-space:break-spaces}svg>foreignObject>section code br,svg>foreignObject>section tt br{display:none}svg>foreignObject>section del code{text-decoration:inherit}svg>foreignObject>section samp{font-size:85%}svg>foreignObject>section :is(pre,marp-pre) code{font-size:100%}svg>foreignObject>section :is(pre,marp-pre)>code{background:transparent;border:0;margin:0;padding:0;white-space:pre;word-break:normal}svg>foreignObject>section .highlight{margin-bottom:16px}svg>foreignObject>section .highlight :is(pre,marp-pre){margin-bottom:0;word-break:normal}svg>foreignObject>section :is(pre,marp-pre){background-color:var(--color-canvas-subtle);border-radius:6px;font-size:85%;line-height:1.45;overflow:auto;padding:16px}svg>foreignObject>section :is(pre,marp-pre) code,svg>foreignObject>section :is(pre,marp-pre) tt{word-wrap:normal;background-color:transparent;border:0;display:inline;line-height:inherit;margin:0;max-width:auto;overflow:visible;padding:0}svg>foreignObject>section .csv-data td,svg>foreignObject>section .csv-data th{font-size:12px;line-height:1;overflow:hidden;padding:5px;text-align:left;white-space:nowrap}svg>foreignObject>section .csv-data .blob-num{background:var(--color-canvas-default);border:0;padding:10px 8px 9px;text-align:right}svg>foreignObject>section .csv-data tr{border-top:0}svg>foreignObject>section .csv-data th{background:var(--color-canvas-subtle);border-top:0;font-weight:var(--base-text-weight-semibold,600)}svg>foreignObject>section [data-footnote-ref]:before{content:"["}svg>foreignObject>section [data-footnote-ref]:after{content:"]"}svg>foreignObject>section .footnotes{border-top:1px solid var(--color-border-default);color:var(--color-fg-muted);font-size:12px}svg>foreignObject>section>svg>foreignObject>section section.footnotes{--marpit-root-font-size:12px}svg>foreignObject>section .footnotes ol{padding-left:16px}svg>foreignObject>section .footnotes ol ul{display:inline-block;margin-top:16px;padding-left:16px}svg>foreignObject>section .footnotes li{position:relative}svg>foreignObject>section .footnotes li:target:before{border:2px solid var(--color-accent-emphasis);border-radius:6px;bottom:-8px;content:"";left:-24px;pointer-events:none;position:absolute;right:-8px;top:-8px}svg>foreignObject>section .footnotes li:target{color:var(--color-fg-default)}svg>foreignObject>section .footnotes .data-footnote-backref g-emoji{font-family:monospace}svg>foreignObject>section .pl-c{color:var(--color-prettylights-syntax-comment)}svg>foreignObject>section .pl-c1,svg>foreignObject>section .pl-s .pl-v{color:var(--color-prettylights-syntax-constant)}svg>foreignObject>section .pl-e,svg>foreignObject>section .pl-en{color:var(--color-prettylights-syntax-entity)}svg>foreignObject>section .pl-s .pl-s1,svg>foreignObject>section .pl-smi{color:var(--color-prettylights-syntax-storage-modifier-import)}svg>foreignObject>section .pl-ent{color:var(--color-prettylights-syntax-entity-tag)}svg>foreignObject>section .pl-k{color:var(--color-prettylights-syntax-keyword)}svg>foreignObject>section .pl-pds,svg>foreignObject>section .pl-s,svg>foreignObject>section .pl-s .pl-pse .pl-s1,svg>foreignObject>section .pl-sr,svg>foreignObject>section .pl-sr .pl-cce,svg>foreignObject>section .pl-sr .pl-sra,svg>foreignObject>section .pl-sr .pl-sre{color:var(--color-prettylights-syntax-string)}svg>foreignObject>section .pl-smw,svg>foreignObject>section .pl-v{color:var(--color-prettylights-syntax-variable)}svg>foreignObject>section .pl-bu{color:var(--color-prettylights-syntax-brackethighlighter-unmatched)}svg>foreignObject>section .pl-ii{background-color:var(--color-prettylights-syntax-invalid-illegal-bg);color:var(--color-prettylights-syntax-invalid-illegal-text)}svg>foreignObject>section .pl-c2{background-color:var(--color-prettylights-syntax-carriage-return-bg);color:var(--color-prettylights-syntax-carriage-return-text)}svg>foreignObject>section .pl-sr .pl-cce{color:var(--color-prettylights-syntax-string-regexp);font-weight:700}svg>foreignObject>section .pl-ml{color:var(--color-prettylights-syntax-markup-list)}svg>foreignObject>section .pl-mh,svg>foreignObject>section .pl-mh .pl-en,svg>foreignObject>section .pl-ms{color:var(--color-prettylights-syntax-markup-heading);font-weight:700}svg>foreignObject>section .pl-mi{color:var(--color-prettylights-syntax-markup-italic);font-style:italic}svg>foreignObject>section .pl-mb{color:var(--color-prettylights-syntax-markup-bold);font-weight:700}svg>foreignObject>section .pl-md{background-color:var(--color-prettylights-syntax-markup-deleted-bg);color:var(--color-prettylights-syntax-markup-deleted-text)}svg>foreignObject>section .pl-mi1{background-color:var(--color-prettylights-syntax-markup-inserted-bg);color:var(--color-prettylights-syntax-markup-inserted-text)}svg>foreignObject>section .pl-mc{background-color:var(--color-prettylights-syntax-markup-changed-bg);color:var(--color-prettylights-syntax-markup-changed-text)}svg>foreignObject>section .pl-mi2{background-color:var(--color-prettylights-syntax-markup-ignored-bg);color:var(--color-prettylights-syntax-markup-ignored-text)}svg>foreignObject>section .pl-mdr{color:var(--color-prettylights-syntax-meta-diff-range);font-weight:700}svg>foreignObject>section .pl-ba{color:var(--color-prettylights-syntax-brackethighlighter-angle)}svg>foreignObject>section .pl-sg{color:var(--color-prettylights-syntax-sublimelinter-gutter-mark)}svg>foreignObject>section .pl-corl{color:var(--color-prettylights-syntax-constant-other-reference-link);text-decoration:underline}svg>foreignObject>section g-emoji{display:inline-block;font-family:Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:1em;font-style:normal!important;font-weight:var(--base-text-weight-normal,400);line-height:1;min-width:1ch;vertical-align:-.075em}svg>foreignObject>section g-emoji img{height:1em;width:1em}svg>foreignObject>section .task-list-item{list-style-type:none}svg>foreignObject>section .task-list-item label{font-weight:var(--base-text-weight-normal,400)}svg>foreignObject>section .task-list-item.enabled label{cursor:pointer}svg>foreignObject>section .task-list-item+.task-list-item{margin-top:4px}svg>foreignObject>section .task-list-item .handle{display:none}svg>foreignObject>section .task-list-item-checkbox{margin:0 .2em .25em -1.4em;vertical-align:middle}svg>foreignObject>section .contains-task-list:dir(rtl) .task-list-item-checkbox{margin:0 -1.6em .25em .2em}svg>foreignObject>section .contains-task-list{position:relative}svg>foreignObject>section .contains-task-list:focus-within .task-list-item-convert-container,svg>foreignObject>section .contains-task-list:hover .task-list-item-convert-container{clip:auto;display:block;height:24px;overflow:visible;width:auto}svg>foreignObject>section ::-webkit-calendar-picker-indicator{filter:invert(50%)}svg>foreignObject>section :is(h1,marp-h1){color:var(--h1-color);font-size:1.6em}svg>foreignObject>section :is(h1,marp-h1),svg>foreignObject>section :is(h2,marp-h2){border-bottom:none}svg>foreignObject>section :is(h2,marp-h2){font-size:1.3em}svg>foreignObject>section :is(h3,marp-h3){font-size:1.1em}svg>foreignObject>section :is(h4,marp-h4){font-size:1.05em}svg>foreignObject>section :is(h5,marp-h5){font-size:1em}svg>foreignObject>section :is(h6,marp-h6){font-size:.9em}svg>foreignObject>section :is(h1,marp-h1) strong,svg>foreignObject>section :is(h2,marp-h2) strong,svg>foreignObject>section :is(h3,marp-h3) strong,svg>foreignObject>section :is(h4,marp-h4) strong,svg>foreignObject>section :is(h5,marp-h5) strong,svg>foreignObject>section :is(h6,marp-h6) strong{color:var(--heading-strong-color);font-weight:inherit}svg>foreignObject>section :is(h1,marp-h1)::part(auto-scaling),svg>foreignObject>section :is(h2,marp-h2)::part(auto-scaling),svg>foreignObject>section :is(h3,marp-h3)::part(auto-scaling),svg>foreignObject>section :is(h4,marp-h4)::part(auto-scaling),svg>foreignObject>section :is(h5,marp-h5)::part(auto-scaling),svg>foreignObject>section :is(h6,marp-h6)::part(auto-scaling){max-height:563px}svg>foreignObject>section hr{height:0;padding-top:.25em}svg>foreignObject>section :is(pre,marp-pre){border:1px solid var(--color-border-default);line-height:1.15;overflow:visible}svg>foreignObject>section :is(pre,marp-pre)::part(auto-scaling){max-height:529px}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs){color:var(--color-prettylights-syntax-storage-modifier-import)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-doctag),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-keyword),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-meta .hljs-keyword),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-template-tag),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-template-variable),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-type),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-variable.language_){color:var(--color-prettylights-syntax-keyword)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-title),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-title.class_),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-title.class_.inherited__),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-title.function_){color:var(--color-prettylights-syntax-entity)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-attr),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-attribute),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-literal),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-meta),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-number),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-operator),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-selector-attr),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-selector-class),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-selector-id),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-variable){color:var(--color-prettylights-syntax-constant)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-meta .hljs-string),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-regexp),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-string){color:var(--color-prettylights-syntax-string)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-built_in),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-symbol){color:var(--color-prettylights-syntax-variable)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-code),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-comment),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-formula){color:var(--color-prettylights-syntax-comment)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-name),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-quote),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-selector-pseudo),svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-selector-tag){color:var(--color-prettylights-syntax-entity-tag)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-subst){color:var(--color-prettylights-syntax-storage-modifier-import)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-section){color:var(--color-prettylights-syntax-markup-heading);font-weight:700}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-bullet){color:var(--color-prettylights-syntax-markup-list)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-emphasis){color:var(--color-prettylights-syntax-markup-italic);font-style:italic}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-strong){color:var(--color-prettylights-syntax-markup-bold);font-weight:700}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-addition){background-color:var(--color-prettylights-syntax-markup-inserted-bg);color:var(--color-prettylights-syntax-markup-inserted-text)}svg>foreignObject>section :is(pre,marp-pre) :where(.hljs-deletion){background-color:var(--color-prettylights-syntax-markup-deleted-bg);color:var(--color-prettylights-syntax-markup-deleted-text)}svg>foreignObject>section footer,svg>foreignObject>section header{color:var(--header-footer-color);font-size:18px;left:30px;margin:0;position:absolute}svg>foreignObject>section header{top:21px}svg>foreignObject>section footer{bottom:21px}svg>foreignObject>section{--h1-color:#246;--header-footer-color:hsla(0,0%,40%,.75);--heading-strong-color:#48c;--paginate-color:#777;align-items:stretch;display:flex;flex-flow:column nowrap;font-size:29px;height:720px;justify-content:center;padding:78.5px;width:1280px}svg>foreignObject>section{--marpit-root-font-size:29px}svg>foreignObject>section:where(.invert){--h1-color:#cee7ff;--header-footer-color:hsla(0,0%,60%,.75);--heading-strong-color:#7bf;--paginate-color:#999}svg>foreignObject>section>:last-child,svg>foreignObject>section[data-footer]>:nth-last-child(2){margin-bottom:0}svg>foreignObject>section>:first-child,svg>foreignObject>section>header:first-child+*{margin-top:0}svg>foreignObject>section:after{bottom:21px;color:var(--paginate-color);font-size:24px;padding:0;position:absolute;right:30px}svg>foreignObject>section:after{--marpit-root-font-size:24px}svg>foreignObject>section[data-color] :is(h1,marp-h1),svg>foreignObject>section[data-color] :is(h2,marp-h2),svg>foreignObject>section[data-color] :is(h3,marp-h3),svg>foreignObject>section[data-color] :is(h4,marp-h4),svg>foreignObject>section[data-color] :is(h5,marp-h5),svg>foreignObject>section[data-color] :is(h6,marp-h6){color:currentcolor}svg>foreignObject>section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}
+
+/* @theme am_blue */@auto-scaling true;svg>foreignObject>:where(section):not([root]){--font-family-main:'Latin Modern Math','Adobe Garamond','方正宋刻本秀楷简体','Calibri','楷体','华文中宋','楷体','霞鹜文楷 屏幕阅读版';--font-family-title:'Optima LT Medium','Arial','方正苏新诗柳楷简体','黑体';--font-family-footer:'Charm','Calibri','叶根友毛笔行书修正版','方正苏新诗柳楷简体','楷体';--font-family-code:'Fira Code','HYMingChanKeBen W','Consolas','霞鹜文楷等宽','华文中宋','宋体';--font-size-1:55px;--foot-size-subtitle:42px;--font-size-2-3:38px;--font-size-4-5:30px;--font-size-main:25px;--font-size-footer:22px;--font-size-page:12px;--font-size-code:22px;--color-title:rgb(255,255,255);--color-footer:#8c8c8c;--color-navbar-font:rgb(108,95,91);--color-few:#91a814;--color-quote:rgba(254,176,98,0.1);--color-main:#041d22;--color-coverbg:#2c9cb1;--color-much:#1482a8;--color-trans:#72bdcb;--color-navbar-bg:#d0e9ee;--color-code-bg:#e8f4f6}svg>foreignObject>section{font-family:var(--font-family-main);font-size:var(--font-size-main);color:var(--color-main);text-align:justify}svg>foreignObject>section{--marpit-root-font-size:var(--font-size-main)}svg>foreignObject>section :is(h1,marp-h1){font-family:var(--font-family-title);font-size:var(--font-size-1);color:var(--color-title)}svg>foreignObject>section :is(h2,marp-h2),svg>foreignObject>section :is(h3,marp-h3){font-family:var(--font-family-title);font-size:var(--font-size-2-3);color:var(--color-much)}svg>foreignObject>section :is(h4,marp-h4),svg>foreignObject>section :is(h5,marp-h5){font-family:var(--font-family-title);font-size:var(--font-size-4-5);color:var(--color-much)}svg>foreignObject>section header{top:12px}
+
+/* 列表 */svg>foreignObject>section ol{line-height:calc(var(--marpit-root-font-size, 1rem) * 1.4);padding-left:15%}svg>foreignObject>section ul{line-height:calc(var(--marpit-root-font-size, 1rem) * 1.4);padding-left:35px}svg>foreignObject>section ul.a{list-style-type:disc}svg>foreignObject>section ul.b{list-style-type:circle}svg>foreignObject>section ul.c{list-style-type:square}svg>foreignObject>section ul li::marker{color:var(--color-much)}svg>foreignObject>section blockquote{border-left:8px solid var(--color-much);padding:10px 25px;border-radius:8px;background-color:var(--color-quote);font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9);font-family:var(--font-family-main)}svg>foreignObject>section blockquote strong{font-family:var(--font-family-main)}svg>foreignObject>section blockquote>p:before{color:var(--color-much);padding-right:2%;content:"\f10d";font-family:"FontAwesome"}svg>foreignObject>section a{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9);padding:0 calc(var(--marpit-root-font-size, 1rem) * .2);color:var(--color-main);font-family:var(--font-family-main)}svg>foreignObject>section a:hover{color:var(--color-much);text-decoration:underline}svg>foreignObject>section a:after{font-size:0.6em;padding-left:0.5%;content:"\f148"; /* f148 f0c1 f08e f14c f0c6 */font-family:"FontAwesome";color:var(--color-much)}svg>foreignObject>section:after{font-family:"FontAwesome";font-size:var(--font-size-page);margin-right:-10px;margin-bottom:-14px;content:attr(data-marpit-pagination) "\f101 " attr(data-marpit-pagination-total);letter-spacing:3px;padding:4px 10px;border-radius:5px;border:1px solid var(--color-footer);color:var(--color-footer)}svg>foreignObject>section:after{--marpit-root-font-size:var(--font-size-page)}svg>foreignObject>section footer{color:var(--color-footer);bottom:1%;left:2%;width:100%;height:4%;display:flex;justify-content:space-between}svg>foreignObject>section footer>em{font-family:var(--font-family-footer);font-size:var(--font-size-footer);letter-spacing:1px;font-style:normal}svg>foreignObject>section footer:after{content:""}svg>foreignObject>section .MathJax{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.95);font-family:'Adobe Garamond'}svg>foreignObject>section section.MathJax{--marpit-root-font-size:calc(var(--marpit-root-font-size, 1rem) * 0.95)}svg>foreignObject>section :is(pre,marp-pre){text-align:left;border:0.3px solid var(--color-few);border-radius:10px;padding:28px;line-height:115%;overflow:auto;font-size:var(--font-size-footer);font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9)}svg>foreignObject>section ::-webkit-scrollbar{width:3px;height:3px}svg>foreignObject>section ::-webkit-scrollbar-track{border-radius:3px;background-color:#f6f8fa}svg>foreignObject>section ::-webkit-scrollbar-track:hover{background-color:var(--color-few)}svg>foreignObject>section ::-webkit-scrollbar-track:active{background-color:var(--color-few)}svg>foreignObject>section ::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--color-few)}svg>foreignObject>section ::-webkit-scrollbar-thumb:hover{background-color:var(--color-few)}svg>foreignObject>section ::-webkit-scrollbar-thumb:active{background-color:var(--color-few)}svg>foreignObject>section code{padding:2px;border-radius:1px;background-color:var(--color-code-bg);font-family:var(--font-family-code);font-size:calc(var(--marpit-root-font-size, 1rem) * 0.8);letter-spacing:-1px}svg>foreignObject>section strong{font-size:calc(var(--marpit-root-font-size, 1rem) * 1.03);font-weight:bolder;color:var(--color-much)}svg>foreignObject>section em{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9);font-style:normal}svg>foreignObject>section img{max-width:95% ;border-radius:8px;margin:auto}svg>foreignObject>section img[alt*='#l']{float:left}svg>foreignObject>section img[alt*='#r']{float:right}svg>foreignObject>section img[alt*='#c']{display:block;margin:auto}svg>foreignObject>section.cover_a{width:100%;background:linear-gradient(to bottom,var(--color-coverbg) 60%,white 40%);text-align:center}svg>foreignObject>section.cover_a :is(h1,marp-h1){background-color:var(--color-coverbg);vertical-align:middle;padding:0px 80px;top:28%;width:88%;transform:translateX(-6%);position:absolute}svg>foreignObject>section.cover_a :is(h6,marp-h6){font-family:var(--font-family-title);font-size:var(--foot-size-subtitle);color:var(--color-title);padding:0px 80px;top:38%;width:90%;transform:translateX(-6%);position:absolute}svg>foreignObject>section.cover_a p{bottom:8%;width:100%;transform:translateX(-6%);position:absolute;justify-content:center;align-items:center}svg>foreignObject>section.cover_a strong{color:var(--color-main)}svg>foreignObject>section.cover_a a:after{content:""}svg>foreignObject>section.cover_e{width:100%;background:linear-gradient(108deg,white 70%,var(--color-coverbg) 30%);text-align:left}svg>foreignObject>section.cover_e :is(h1,marp-h1){top:28%;width:70%;transform:translateX(-1.2%);position:absolute;color:var(--color-much)}svg>foreignObject>section.cover_e :is(h6,marp-h6){font-family:var(--font-family-title);font-size:var(--foot-size-subtitle);color:var(--color-much);top:38%;width:68%;position:absolute}svg>foreignObject>section.cover_e p{bottom:15%;transform:translateX(5%);justify-content:center;align-items:center;position:absolute}svg>foreignObject>section.cover_e strong{color:var(--color-main)}svg>foreignObject>section.cover_e footer>img{transform:scale(1.2);background-color:rgba(255,255,255,0);background-blend-mode:lighten;filter:brightness(0%) contrast(70%) grayscale(100%)}svg>foreignObject>section.cover_e header>img{transform:scale(0.72);background-color:rgba(255,255,255,0);background-blend-mode:lighten;filter:brightness(0%) contrast(70%) grayscale(100%)}svg>foreignObject>section.cover_e a:after{content:""}svg>foreignObject>section.cover_e footer{height:128px;width:26%;padding-bottom:0px;padding-left:0px;left:72%;bottom:0px}svg>foreignObject>section.cover_e header{background-color:var(--color-coverbg);height:100px;width:100px;top:0px;left:80px;text-align:center;vertical-align:middle}svg>foreignObject>section.cover_b :is(h1,marp-h1){background-color:var(--color-coverbg);padding:30px;width:auto;height:26%;top:15%;right:5%;left:5%;position:absolute;text-align:center;display:flex;justify-content:center;align-items:center;border-radius:20px}svg>foreignObject>section.cover_b :is(h6,marp-h6){font-family:var(--font-family-title);font-size:var(--foot-size-subtitle);color:var(--color-title);background-color:var(--color-coverbg);padding-top:30px;width:auto;height:13%;top:33%;right:5%;left:5%;position:absolute;text-align:center;border-bottom-right-radius:20px;border-bottom-left-radius:20px}svg>foreignObject>section.cover_b p{text-align:center;bottom:13%;width:100%;transform:translateX(-6%);position:absolute;justify-content:center;align-items:center}svg>foreignObject>section.cover_b strong{color:var(--color-main)}svg>foreignObject>section.cover_b a:after{content:""}svg>foreignObject>section.cover_c{width:100%;background:linear-gradient(to bottom,white 20%,var(--color-coverbg) 20% 88%,white 88%);text-align:left}svg>foreignObject>section.cover_c img{background-color:rgba(255,255,255,0);background-blend-mode:lighten;filter:brightness(0%) contrast(60%) grayscale(80%)}svg>foreignObject>section.cover_c :is(h1,marp-h1){width:95%;padding-top:8%;transform:translateX(0%)}svg>foreignObject>section.cover_c :is(h6,marp-h6){font-family:var(--font-family-title);font-size:var(--foot-size-subtitle);color:var(--color-title);transform:translateX(1%);margin-top:0px;width:95%}svg>foreignObject>section.cover_c p{margin-top:5%;transform:translateX(1.5%);color:var(--color-title)}svg>foreignObject>section.cover_c a,svg>foreignObject>section.cover_c strong{color:var(--color-title)}svg>foreignObject>section.cover_c a:after{content:""}svg>foreignObject>section.cover_c footer{font-size:larger;left:68%;bottom:30px}svg>foreignObject>section.cover_c header{background-color:rgba(255,255,255,0);background-blend-mode:lighten;height:100px;width:350px;text-align:left;padding:0 4%}svg>foreignObject>section.cover_d{width:100%;background-image:linear-gradient(to bottom,white 5%,var(--color-coverbg) 5% 60%,white 60%);text-align:left}svg>foreignObject>section.cover_d :is(h1,marp-h1){width:95%;
+  /* padding-top: 8%; */transform:translateX(0%);position:relative;bottom:2%}svg>foreignObject>section.cover_d :is(h6,marp-h6){font-family:var(--font-family-title);font-size:var(--foot-size-subtitle);color:var(--color-title);transform:translateX(1%);margin-top:0px;width:95%;position:relative;bottom:0%}svg>foreignObject>section.cover_d p{position:relative;bottom:-22%;transform:translateX(1.5%)}svg>foreignObject>section.cover_d strong{color:var(--color-main)}svg>foreignObject>section.cover_d a:after{content:""}svg>foreignObject>section.cover_d footer{font-size:larger;left:68%;bottom:30px}svg>foreignObject>section.toc_a ul{list-style-type:none;padding:30px;margin:30px;position:relative;border-radius:0px 0px 20px 20px;border-top:8px solid var(--color-navbar-font);background-color:white;box-shadow:3px 3px 25px rgb(215,224,235)}svg>foreignObject>section.toc_a ul li{counter-increment:toc_a}svg>foreignObject>section.toc_a ul li:before{font-family:var(--font-family-title);color:white;content:counter(toc_a);margin-right:20px;margin-bottom:10px;width:35px;height:35px;display:inline-flex;position:relative;align-items:center;justify-content:center;background-color:var(--color-much);border-radius:50%}svg>foreignObject>section.toc_a ul li:hover:before{-moz-transition:all 0.5s ease-out;transition:all 0.3s ease-out;-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}svg>foreignObject>section.toc_a header{height:100%;width:150%;font-family:'Fira Code';font-weight:bolder;font-size:1080%;left:-8px;text-align:center;display:flex;line-height:162px;-webkit-text-fill-color:transparent;-webkit-text-stroke:0.75px var(--color-navbar-font)}svg>foreignObject>section.toc_b{width:100%;background:linear-gradient(to right,white 6%,var(--color-coverbg) 6% 30%,white 30%)}svg>foreignObject>section ol,svg>foreignObject>section.toc_b ul{list-style-type:none;display:table;align-items:center;justify-content:center;width:63%;left:30%;position:absolute;line-height:200%}svg>foreignObject>section.toc_b ul li{counter-increment:toc_b}svg>foreignObject>section.toc_b ul li:before{content:counter(toc_b);margin:0px 20px 0px 0px;width:35px;height:35px;display:inline-flex;position:relative;align-items:center;justify-content:center;font-family:var(--font-family-title);background-color:var(--color-much);border-radius:50%;color:white}svg>foreignObject>section.toc_b ul li:hover:before{-moz-transition:all 0.5s ease-out;transition:all 0.3s ease-out;-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}svg>foreignObject>section.toc_b header{text-align:center;width:20%;left:8%;top:25%;font-size:var(--font-size-2-3);color:var(--color-title);font-weight:bolder;line-height:200%;letter-spacing:3px;font-family:"Fira Code",var(--font-family-main)}svg>foreignObject>section.toc_b img{background-color:rgba(255,255,255,0);background-blend-mode:lighten;padding-top:30px;width:70%;filter:brightness(30%) contrast(70%) grayscale(100%)}svg>foreignObject>section.fglass ul{padding:20px 20px 20px 60px;margin-left:-25px;border-radius:0px 0px 20px 20px;border-top:8px solid var(--color-navbar-font);background-color:white;box-shadow:1px 1px 12px rgb(215,224,235)}svg>foreignObject>section.cols2_ol_sq :is(h2,marp-h2),svg>foreignObject>section.cols2_ol_sq :is(h3,marp-h3){
+  /* top: 13%;
+  position: absolute; */margin-left:-2%}svg>foreignObject>section.cols2_ol_sq p{padding-bottom:1%;margin-left:-1.5%}svg>foreignObject>section.cols2_ol_sq ol,svg>foreignObject>section.cols2_ol_sq ul{left:1%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.7em;list-style-type:none;width:98%;column-gap:3em}svg>foreignObject>section.cols2_ol_sq ol li,svg>foreignObject>section.cols2_ol_sq ul li{counter-increment:cols2_ol_sq}svg>foreignObject>section.cols2_ol_sq ol li:before,svg>foreignObject>section.cols2_ol_sq ul li:before{content:counter(cols2_ol_sq);margin:0px 20px 0px 0px;width:30px;height:30px;display:inline-flex;position:relative;align-items:center;justify-content:center;font-size:20px;font-family:var(--font-family-title);background-color:var(--color-much);
+  /* border-radius: 50%; */color:white;margin-left:-8%}svg>foreignObject>section.cols2_ol_sq ol li:hover:before,svg>foreignObject>section.cols2_ol_sq ul li:hover:before{-moz-transition:all 0.5s ease-out;transition:all 0.7s ease-out;-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}svg>foreignObject>section.cols2_ol_ci :is(h2,marp-h2),svg>foreignObject>section.cols2_ol_ci :is(h3,marp-h3){margin-left:-2%}svg>foreignObject>section.cols2_ol_ci p{padding-bottom:1%;margin-left:-1.5%}svg>foreignObject>section.cols2_ol_ci ol,svg>foreignObject>section.cols2_ol_ci ul{left:1%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.7em;list-style-type:none;width:98%;column-gap:3em}svg>foreignObject>section.cols2_ol_ci ol li,svg>foreignObject>section.cols2_ol_ci ul li{counter-increment:cols2_ol_ci}svg>foreignObject>section.cols2_ol_ci ol li:before,svg>foreignObject>section.cols2_ol_ci ul li:before{content:counter(cols2_ol_ci);margin:0px 20px 0px 0px;width:30px;height:30px;display:inline-flex;position:relative;align-items:center;justify-content:center;font-size:20px;font-family:var(--font-family-title);background-color:var(--color-much);border-radius:50%;color:white;margin-left:-8%}svg>foreignObject>section.cols2_ol_ci ol li:hover:before,svg>foreignObject>section.cols2_ol_ci ul li:hover:before{-moz-transition:all 0.5s ease-out;transition:all 0.7s ease-out;-moz-transform:rotate(360deg);-webkit-transform:rotate(360deg);-o-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg)}svg>foreignObject>section.cols2_ul_sq :is(h2,marp-h2),svg>foreignObject>section.cols2_ul_sq :is(h3,marp-h3){
+  /* top: 13%;
+  position: absolute; */margin-left:-2%}svg>foreignObject>section.cols2_ul_sq p{padding-bottom:1%;margin-left:-1.5%}svg>foreignObject>section.cols2_ul_sq ul{left:1%;
+  /* margin-left: -2%; */width:98%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.7em;list-style-type:none;column-gap:3em}svg>foreignObject>section.cols2_ul_sq ul li{display:block;position:relative}svg>foreignObject>section.cols2_ul_sq ul li:before{content:"";display:inline-flex;position:absolute;top:1.2em;left:-30px;margin-top:-0.9em;align-items:center;justify-content:center;font-family:var(--font-family-title);background-color:var(--color-much);height:10px;width:10px
+  /* border-radius: 50%; */}svg>foreignObject>section.cols2_ul_ci :is(h2,marp-h2),svg>foreignObject>section.cols2_ul_ci :is(h3,marp-h3){
+  /* top: 13%;
+  position: absolute; */margin-left:-2%}svg>foreignObject>section.cols2_ul_ci p{padding-bottom:1%;margin-left:-1.5%}svg>foreignObject>section.cols2_ul_ci ul{left:1%;
+  /* margin-left: -2%; */width:98%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.7em;list-style-type:none;column-gap:3em}svg>foreignObject>section.cols2_ul_ci ul li{display:block;position:relative}svg>foreignObject>section.cols2_ul_ci ul li:before{content:"";display:inline-flex;position:absolute;top:1.2em;left:-30px;margin-top:-0.9em;align-items:center;justify-content:center;font-family:var(--font-family-title);background-color:var(--color-much);height:10px;width:10px;border-radius:50%}svg>foreignObject>section.cols-2{overflow:visible;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1.5);grid-template-columns:50% 50%;grid-template-rows:10% 90%;grid-template-areas:"slideheading slideheading" "leftpanel    rightpanel"}svg>foreignObject>section.cols-2 :is(h2,marp-h2),svg>foreignObject>section.cols-2 :is(h3,marp-h3){grid-area:slideheading;font-size:var(--font-size-2-3)}svg>foreignObject>section.cols-2 .ldiv{grid-area:leftpanel;margin-top:-5%}svg>foreignObject>section.cols-2 .rdiv{grid-area:rightpanel;margin-top:-5%}svg>foreignObject>section.cols-2 .limg{grid-area:leftpanel;margin-top:-5%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2 .rimg{grid-area:rightpanel;margin-top:-5%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-3{overflow:visible;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:1fr 1fr 1fr;grid-template-rows:10% 90%;grid-template-areas:"slideheading slideheading slideheading" "leftpanel    middlepanel  rightpanel"}svg>foreignObject>section.cols-3 :is(h2,marp-h2),svg>foreignObject>section.cols-3 :is(h3,marp-h3){grid-area:slideheading;font-size:var(--font-size-2-3)}svg>foreignObject>section.cols-3 .ldiv{grid-area:leftpanel;margin-top:-5%}svg>foreignObject>section.cols-3 .mdiv{grid-area:middlepanel;margin-top:-5%}svg>foreignObject>section.cols-3 .rdiv{grid-area:rightpanel;margin-top:-5%}svg>foreignObject>section.cols-3 .limg{grid-area:leftpanel;margin-top:-5%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-3 .mimg{grid-area:middlepanel;margin-top:-5%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-3 .rimg{grid-area:rightpanel;margin-top:-5%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-73{overflow:visible;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:70% 30%;grid-template-rows:10% 90%;grid-template-areas:"slideheading slideheading" "leftpanel    rightpanel"}svg>foreignObject>section.cols-2-73 :is(h2,marp-h2),svg>foreignObject>section.cols-2-73 :is(h3,marp-h3){grid-area:slideheading;font-size:var(--font-size-2-3)}svg>foreignObject>section.cols-2-73 .ldiv{grid-area:leftpanel;margin-top:-2%}svg>foreignObject>section.cols-2-73 .rdiv{grid-area:rightpanel;margin-top:-2%}svg>foreignObject>section.cols-2-73 .limg{grid-area:leftpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-73 .rimg{grid-area:rightpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-64{overflow:visible;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:60% 40%;grid-template-rows:10% 90%;grid-template-areas:"slideheading slideheading" "leftpanel    rightpanel"}svg>foreignObject>section.cols-2-64 :is(h2,marp-h2),svg>foreignObject>section.cols-2-64 :is(h3,marp-h3){grid-area:slideheading;font-size:var(--font-size-2-3)}svg>foreignObject>section.cols-2-64 .ldiv{grid-area:leftpanel;margin-top:-2%}svg>foreignObject>section.cols-2-64 .rdiv{grid-area:rightpanel;margin-top:-2%}svg>foreignObject>section.cols-2-64 .limg{grid-area:leftpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-64 .rimg{grid-area:rightpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-37{overflow:visible;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:30% 70%;grid-template-rows:10% 90%;grid-template-areas:"slideheading slideheading" "leftpanel    rightpanel"}svg>foreignObject>section.cols-2-37 :is(h2,marp-h2),svg>foreignObject>section.cols-2-37 :is(h3,marp-h3){grid-area:slideheading;font-size:var(--font-size-2-3)}svg>foreignObject>section.cols-2-37 .ldiv{grid-area:leftpanel;margin-top:-2%}svg>foreignObject>section.cols-2-37 .rdiv{grid-area:rightpanel;margin-top:-2%}svg>foreignObject>section.cols-2-37 .limg{grid-area:leftpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-37 .rimg{grid-area:rightpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-46{overflow:visible;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:40% 60%;grid-template-rows:10% 90%;grid-template-areas:"slideheading slideheading" "leftpanel    rightpanel"}svg>foreignObject>section.cols-2-46 :is(h2,marp-h2),svg>foreignObject>section.cols-2-46 :is(h3,marp-h3){grid-area:slideheading;font-size:var(--font-size-2-3)}svg>foreignObject>section.cols-2-46 .ldiv{grid-area:leftpanel;margin-top:-2%}svg>foreignObject>section.cols-2-46 .rdiv{grid-area:rightpanel;margin-top:-2%}svg>foreignObject>section.cols-2-46 .limg{grid-area:leftpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.cols-2-46 .rimg{grid-area:rightpanel;margin-top:-2%;display:flex;align-items:center;justify-content:center}svg>foreignObject>section.bq-black blockquote,svg>foreignObject>section.bq-blue blockquote,svg>foreignObject>section.bq-green blockquote,svg>foreignObject>section.bq-purple blockquote,svg>foreignObject>section.bq-red blockquote{padding:1%;letter-spacing:0px;border-left:none;background-color:white}svg>foreignObject>section.bq-purple blockquote p>strong{color:var(--color-main);font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9)}svg>foreignObject>section.bq-black blockquote>p:before,svg>foreignObject>section.bq-blue blockquote>p:before,svg>foreignObject>section.bq-green blockquote>p:before,svg>foreignObject>section.bq-purple blockquote>p:before,svg>foreignObject>section.bq-red blockquote>p:before{padding-right:0px;content:"";color:white}svg>foreignObject>section.bq-black blockquote>p:first-child,svg>foreignObject>section.bq-blue blockquote>p:first-child,svg>foreignObject>section.bq-green blockquote>p:first-child,svg>foreignObject>section.bq-purple blockquote>p:first-child,svg>foreignObject>section.bq-red blockquote>p:first-child{margin-bottom:-1px;line-height:calc(var(--marpit-root-font-size, 1rem) * 2);padding:0.5% 0.5% 0.5% 1.5%;color:white;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.03)}svg>foreignObject>section.bq-black blockquote>p:not(:first-child),svg>foreignObject>section.bq-blue blockquote>p:not(:first-child),svg>foreignObject>section.bq-green blockquote>p:not(:first-child),svg>foreignObject>section.bq-purple blockquote>p:not(:first-child),svg>foreignObject>section.bq-red blockquote>p:not(:first-child){padding:1% 2%;background-color:rgb(228,234,246)}svg>foreignObject>section.bq-blue blockquote>p:first-child{background-color:rgb(129,161,193)}svg>foreignObject>section.bq-red blockquote>p:first-child{background-color:rgb(191,97,106)}svg>foreignObject>section.bq-green blockquote>p:first-child{background-color:rgb(172,206,141)}svg>foreignObject>section.bq-purple blockquote>p:first-child{background-color:rgb(180,142,173)}svg>foreignObject>section.bq-black blockquote>p:first-child{background-color:rgb(67,76,94)}svg>foreignObject>section.bq-blue blockquote>p:first-child:before{content:"\f518";padding-right:2%;font-family:"FontAwesome"}svg>foreignObject>section.bq-red blockquote>p:first-child:before{content:"\f0eb";padding-right:2%;font-family:"FontAwesome"}svg>foreignObject>section.bq-green blockquote>p:first-child:before{content:"\e0bb";padding-right:2%;font-family:"FontAwesome"}svg>foreignObject>section.bq-purple blockquote>p:first-child:before{content:"\f7e4";padding-right:2%;font-family:"FontAwesome"}svg>foreignObject>section.bq-black blockquote>p:first-child:before{content:"\f5ad";padding-right:2%;font-family:"FontAwesome"}svg>foreignObject>section.lastpage{background:linear-gradient(to bottom,white 20%,var(--color-coverbg) 20% 60%,white 55%);padding:0;display:grid;grid-template-rows:80% 20%;grid-template-columns:auto;grid-template-areas:"heading" "icons"}svg>foreignObject>section.lastpage :is(h6,marp-h6){height:80px;margin-bottom:10px;text-align:center;vertical-align:middle;font-family:var(--font-family-title);font-size:var(--font-size-1);color:var(--color-title);display:grid;padding:0;height:100%;width:100%;align-content:center;justify-content:center}svg>foreignObject>section.lastpage :is(h6,marp-h6){grid-area:heading}svg>foreignObject>section.lastpage .icons{grid-area:icons}svg>foreignObject>section.lastpage div>ul{font-family:var(--font-family-main);width:100%;display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:5em;align-content:center;list-style:none}svg>foreignObject>section.lastpage ul>li>ul>li{margin-left:-100px}svg>foreignObject>section.lastpage div>ul>li>ul>li{list-style:none}svg>foreignObject>section .fa-envelope,svg>foreignObject>section .fa-house,svg>foreignObject>section .fa-phone-volume,svg>foreignObject>section .fa-weixin{border:2px solid;padding:10px;border-radius:50%;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.2)}svg>foreignObject>section section.fa-envelope,svg>foreignObject>section section.fa-house,svg>foreignObject>section section.fa-phone-volume,svg>foreignObject>section section.fa-weixin{--marpit-root-font-size:calc(var(--marpit-root-font-size, 1rem) * 1.2)}svg>foreignObject>section.lastpage a{font-size:var(--font-size-main)}svg>foreignObject>section.lastpage a:after,svg>foreignObject>section.lastpage:after{position:relative;
+  /* content: ""; */border:none;color:white}svg>foreignObject>section.navbar header{background-color:var(--color-navbar-bg);width:100%;height:5%;padding:6px 0px 3px 0px;left:0px;top:0px;display:flex;justify-content:space-between;color:var(--color-navbar-font);white-space:pre}svg>foreignObject>section.navbar header>em,svg>foreignObject>section.navbar header>em>strong,svg>foreignObject>section.navbar header>strong{font-style:normal;font-size:calc(var(--marpit-root-font-size, 1rem) * 0.9);font-weight:normal;color:var(--color-navbar-font)}svg>foreignObject>section.navbar header>strong{border:1px solid white;border-radius:12px;padding:0px 15px 5px 15px;background-color:white}svg>foreignObject>section.navbar header:after,svg>foreignObject>section.navbar header:before{content:""}svg>foreignObject>section.navbar header>em>strong{display:block;width:400px;text-align:left;margin-left:-20px}svg>foreignObject>section.trans{background-color:var(--color-trans)}svg>foreignObject>section.trans :is(h2,marp-h2){text-align:center;color:var(--color-title);font-size:calc(var(--marpit-root-font-size, 1rem) * 2)}svg>foreignObject>section.caption .caption{padding-top:20px;text-align:center;font-size:smaller;color:var(--color-footer)}svg>foreignObject>section.caption>svg>foreignObject>section section.caption{--marpit-root-font-size:smaller}svg>foreignObject>section table{border-collapse:collapse;text-align:center;word-break:initial;font-size:calc(var(--marpit-root-font-size, 1rem) * 0.8);margin:0 auto}svg>foreignObject>section table code{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.7)}svg>foreignObject>section th,svg>foreignObject>section thead{height:40px;border-top:3px solid var(--color-main);font-size:105%;padding:6px}svg>foreignObject>section th,svg>foreignObject>section thead:first-child{border-bottom:3px solid var(--color-main)}svg>foreignObject>section table tr:nth-child(2n){background-color:white}svg>foreignObject>section tbody:last-child{border-bottom:3px solid var(--color-main)}svg>foreignObject>section table>tbody>tr>td,svg>foreignObject>section table>tbody>tr>th,svg>foreignObject>section table>tfoot>tr>td,svg>foreignObject>section table>tfoot>tr>th,svg>foreignObject>section table>thead>tr>td,svg>foreignObject>section table>thead>tr>th{border:0px solid white}svg>foreignObject>section .hljs{display:block;overflow-x:auto;padding:0.5em;font-size:small}svg>foreignObject>section section.hljs{--marpit-root-font-size:small}svg>foreignObject>section .hljs-comment{color:#28a828}svg>foreignObject>section .hljs-string{color:#fd8f3f}svg>foreignObject>section .hljs-number{color:rgb(158,158,62)}svg>foreignObject>section .hljs-keyword{color:#1111e2}svg>foreignObject>section .hljs-symbol{color:#ac1212}svg>foreignObject>section .hljs-variable{color:#fc5fa3}svg>foreignObject>section .hljs-built_in{color:#960ab9}svg>foreignObject>section .hljs-emphasis{font-style:italic}svg>foreignObject>section .hljs-meta{color:#2c2cff}svg>foreignObject>section .hljs-literal{color:#2c2cff}svg>foreignObject>section .hljs-name{color:#2c2cff}svg>foreignObject>section .in-prompt{color:#99bb88}svg>foreignObject>section .in-prompt-number{font-weight:bold}svg>foreignObject>section .out-prompt{color:#ff9090}svg>foreignObject>section .out-prompt-number{font-weight:bold}svg>foreignObject>section .inverted{background-color:white;color:#232629}svg>foreignObject>section.fixedtitleA{justify-content:start}svg>foreignObject>section.fixedtitleB{justify-content:start;display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1.5);grid-template-rows:10% 90%;grid-template-areas:"slideheading" "content"}svg>foreignObject>section.fixedtitleB>:is(h2,marp-h2),svg>foreignObject>section.fixedtitleB>:is(h3,marp-h3),svg>foreignObject>section.fixedtitleB>:is(h4,marp-h4),svg>foreignObject>section.fixedtitleB>:is(h5,marp-h5){grid-area:slideheading;position:absolute;padding:10px;background-color:var(--color-much);color:white;border-radius:8px;font-size:calc(var(--marpit-root-font-size, 1rem) * 1.25)}svg>foreignObject>section.fixedtitleB .div{grid-area:content}svg>foreignObject>section.footnote{display:grid;gap:0.7em;grid-template-rows:1fr auto;grid-template-areas:"content" "footnote"}svg>foreignObject>section.footnote .tdiv{grid-area:"content";justify-content:start}svg>foreignObject>section.footnote .tdiv>:is(h2,marp-h2),svg>foreignObject>section.footnote .tdiv>:is(h3,marp-h3),svg>foreignObject>section.footnote .tdiv>:is(h4,marp-h4),svg>foreignObject>section.footnote .tdiv>:is(h5,marp-h5){margin-bottom:calc(var(--marpit-root-font-size, 1rem) * 1);margin-top:-calc(var(--marpit-root-font-size,1rem) * 1)}svg>foreignObject>section.footnote .bdiv{grid-area:"footnote";font-size:85%;bottom:5%}svg>foreignObject>section.footnote>svg>foreignObject>section section.bdiv{--marpit-root-font-size:85%}svg>foreignObject>section.footnote .bdiv:before{border-top:1.8px dashed var(--color-coverbg);content:"";display:block;margin-bottom:1em}svg>foreignObject>section.tinytext>blockquote,svg>foreignObject>section.tinytext>ol,svg>foreignObject>section.tinytext>p,svg>foreignObject>section.tinytext>table,svg>foreignObject>section.tinytext>ul{font-size:80%}svg>foreignObject>section.tinytext code{font-size:90%}svg>foreignObject>section.tinytext strong{font-size:100%}svg>foreignObject>section.tinytext em{font-size:90%}svg>foreignObject>section.tinytext :is(pre,marp-pre){font-size:70%}svg>foreignObject>section.smalltext>blockquote,svg>foreignObject>section.smalltext>ol,svg>foreignObject>section.smalltext>p,svg>foreignObject>section.smalltext>table,svg>foreignObject>section.smalltext>ul{font-size:90%}svg>foreignObject>section.smalltext code{font-size:90%}svg>foreignObject>section.smalltext strong{font-size:100%}svg>foreignObject>section.smalltext em{font-size:90%}svg>foreignObject>section.smalltext :is(pre,marp-pre){font-size:80%}svg>foreignObject>section.largetext>blockquote,svg>foreignObject>section.largetext>ol,svg>foreignObject>section.largetext>p,svg>foreignObject>section.largetext>table,svg>foreignObject>section.largetext>ul{font-size:115%}svg>foreignObject>section.largetext strong{font-size:100%}svg>foreignObject>section.largetext code{font-size:90%}svg>foreignObject>section.largetext em{font-size:90%}svg>foreignObject>section.largetext :is(pre,marp-pre){font-size:105%}svg>foreignObject>section.hugetext>blockquote,svg>foreignObject>section.hugetext>ol,svg>foreignObject>section.hugetext>p,svg>foreignObject>section.hugetext>table,svg>foreignObject>section.hugetext>ul{font-size:130%}svg>foreignObject>section.hugetext strong{font-size:100%}svg>foreignObject>section.hugetext code{font-size:90%}svg>foreignObject>section.hugetext em{font-size:90%}svg>foreignObject>section.hugetext :is(pre,marp-pre){font-size:120%}svg>foreignObject>section{width:1280px;height:720px}svg>foreignObject>section[data-marpit-advanced-background=background]{columns:initial!important;display:block!important;padding:0!important}svg>foreignObject>section[data-marpit-advanced-background=background]:after,svg>foreignObject>section[data-marpit-advanced-background=background]:before,svg>foreignObject>section[data-marpit-advanced-background=content]:after,svg>foreignObject>section[data-marpit-advanced-background=content]:before{display:none!important}svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction=vertical]{flex-direction:column}svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split]>div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split,50%)}svg>foreignObject>section[data-marpit-advanced-background=background][data-marpit-advanced-background-split=right]>div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}svg>foreignObject>section[data-marpit-advanced-background=background]>div[data-marpit-advanced-background-container]>figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}svg>foreignObject>section[data-marpit-advanced-background=content],svg>foreignObject>section[data-marpit-advanced-background=pseudo]{background:transparent!important}svg>foreignObject>section[data-marpit-advanced-background=pseudo],svg[data-marpit-svg]>foreignObject[data-marpit-advanced-background=pseudo]{pointer-events:none!important}svg>foreignObject>section[data-marpit-advanced-background-split]{width:100%;height:100%}</style></head><body><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="cover_e" data-theme="am_blue" class="cover_e" style="--class:cover_e;--theme:am_blue;" data-size="16:9">
+<h1>Apache Pulsar In Action</h1>
+<h6>The unified messaging &amp; streaming platform made by the creators of Apache Pulsar</h6>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="toc_b" data-header="CONTENTS" data-theme="am_blue" class="toc_b" style="--class:toc_b;--header:CONTENTS;--theme:am_blue;" data-size="16:9">
+<header>CONTENTS</header>
+<h2>目录</h2>
+
+<ul>
+<li><a href="#4">第一部分: Getting Started With Apache Pulsar</a></li>
+<li><a href="#4">第二部分: Apache Pulsar Development Essentials</a></li>
+<li><a href="#4">第三部分: Hands-On Application Development With Pulsar</a></li>
+<li><a href="#1">附录</a></li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="3" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>内容简介</h2>
+
+<ul>
+<li>第一部分讲了消息、流数据、流处理的基础知识，重点介绍了Pulsar是如何提供这些特性的。此外还介绍了Pulsar的独特架构，并且将其与其他流行的消息框架(例如Kafka)进行了对比</li>
+<li>第二部分重点介绍Pulsar原生的流处理能力(被称为Pulsar Function)，以及如何通过它开发事件驱动的应用和微服务，为此还提供了一些可供下载的示例</li>
+<li>第三部分重点介绍Pulsar的流存储，包括其独特的松耦合架构是如何将无限的消息存储在云存储服务上的。同样还探索了其对Event Sourcing和CQRS架构模式的支持。最后介绍了如何通过标准的SQL查询语法查询原生的消息数据(基于Presto执行引擎)</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="trans" data-theme="am_blue" class="trans" style="--class:trans;--theme:am_blue;" data-size="16:9">
+<h2>第一部分: Getting Started With Apache Pulsar</h2>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-footer=" *Pulsar In Action*" data-class="toc_a" data-header="CONTENTS" data-theme="am_blue" class="toc_a" style="--footer: *Pulsar In Action*;--class:toc_a;--header:CONTENTS;--theme:am_blue;" data-size="16:9">
+<header>CONTENTS</header>
+<h2>第一部分</h2>
+
+<ul>
+<li><a href="#6">1. Introduction to Apache Pulsar</a></li>
+<li><a href="#6">2. Pulsar Concepts and Architecture</a></li>
+<li><a href="#6">3. Interacting with Pulsar</a></li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="6" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1. Introduction to Apache Pulsar</h2>
+
+<ul>
+<li>
+<p>本章节包含如下内容：</p>
+<ul>
+<li>企业级消息系统的演化，以及为什么说pulsar代表了下一代的演进方向</li>
+<li>pulsar和现有企业消息系统的对比</li>
+<li>pulsar的面向segment的存储模型与kafka的面向partition的存储模型有哪些不同</li>
+<li>介绍pulsar流处理的真实案例，以及为什么你应该考虑pulsar的原因</li>
+</ul>
+</li>
+<li>
+<p>Apache Pulsar提供了3个重要能力，可用于处理大批量的数据</p>
+<ul>
+<li>实时消息（Real-time messaging）</li>
+<li>实时计算（Real-time compute）</li>
+<li>可扩展的存储（Scalable storage）</li>
+</ul>
+</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="7" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1.1 Enterprise Messaging Systems</h2>
+
+<ul>
+<li>两种不同的消息系统技术
+<ul>
+<li>点对点通信系统：email、短信、WhatsApp、VoIP等</li>
+<li>发布订阅系统：Netflix、Hulu</li>
+</ul>
+</li>
+<li>第二种又叫做 <code>messaging systems</code>、<code>stream</code></li>
+<li>本书主要讲的是 <code>Enterprise Messaging System</code></li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="8" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1.1 Enterprise Messaging Systems</h2>
+
+<ul>
+<li>Enterprise Messaging System (EMS)
+<ul>
+<li>支持多种不同的消息协议：DDS、AMQP、MSMQ等</li>
+<li>上述消息协议支持不同的分布式系统和应用，支持以<strong>异步的方式</strong>发送和接收消息</li>
+</ul>
+</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="9" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.1 Enterprise Messaging Systems</h2>
+<div class=ldiv>
+<ul>
+<li>
+<p>与<strong>同步调用方式</strong>的对比：RPC</p>
+<ul>
+<li>通过服务发现程序找到server地址</li>
+<li>使用合适的参数和类型调用远程方法</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>调用方在收到server响应后才能开始后续流程</li>
+<li>同步模式使得应用变慢</li>
+<li>server可能会不可用，开发者需进行防御性编程</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure-1.1.jpeg" alt="Figure 1.1|625" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="10" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.1 Enterprise Messaging Systems</h2>
+<div class=ldiv>
+<ul>
+<li>特点：
+<ul>
+<li>通过中间层和对方通信</li>
+<li>提供方和调用方之间不用建立直接连接</li>
+<li>EMS系统负责保存消息内容，并且确保投递给接收方进行处理</li>
+<li>以异步的方式发送消息、给出响应结果</li>
+</ul>
+</li>
+<li>优势：
+<ul>
+<li>松耦合架构、系统组件独立演进</li>
+<li>消息元数据语言无关：XML、JSON等，编程语言不受限制</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure-1.2.jpeg" alt="Figure 1.2" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2" data-theme="am_blue" class="cols-2" data-marpit-pagination="11" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2;--theme:am_blue;" data-size="16:9">
+<h2>1.1.1 关键能力</h2>
+
+<ul>
+<li>异步通信（Message Communication）</li>
+<li>消息持久化（Message Retention）</li>
+<li>ACK机制（Acknowledgement）</li>
+<li>消息可消费（Message Cconsumption）</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2" data-theme="am_blue" class="cols-2" data-marpit-pagination="12" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2;--theme:am_blue;" data-size="16:9">
+<h2>1.2 Message Consumption Patterns</h2>
+
+<ul>
+<li>基于 <code>topic</code> 的消息模式</li>
+<li>基于 <code>queue</code> 的消息模式</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="13" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.2.1 发布-订阅消息模式</h2>
+<div class=ldiv>
+<ul>
+<li>生产者发送消息到 <code>topic</code> 中</li>
+<li>消费者订阅 <code>topic</code> 以便接收消息</li>
+<li><code>topic</code> 接收多个生产者发送的消息，按照消息到达的顺序进行存储</li>
+<li>消费端支持多个消费组订阅消息</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure-1.3.jpeg" alt="Figure 1.3" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="14" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.2.2 消息队列模式</h2>
+<div class=ldiv>
+<ul>
+<li>FIFO语义，多个消费者竞争消费</li>
+<li>按照接收到消息的顺序进行投递</li>
+<li>一条消息只能被一个消费者进行消费和处理</li>
+<li>消费者故障的情况下，消息将被重新投递给其他消费者，消息可能会乱序</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure-1.4.jpeg" alt="Figure 1.4" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="15" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1.3 消息系统的演进</h2>
+
+<ul>
+<li>简单回顾消息系统的历史，以及近些年来是如何演进的</li>
+<li>Apache Pulsar不是一项新的技术，它是消息系统演进的下一个方向</li>
+<li>通过提供这些历史背景，希望你能够理解Pulsar与现有消息系统的异同</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="16" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.1 通用消息系统</h2>
+<div class=ldiv>
+<p>如图1.5所示，每一个消息系统都包含如下两层</p>
+<ul>
+<li>服务层（SERVING LAYER）
+<ul>
+<li>概念层，负责与生产者和消费者打交道</li>
+<li>接收消息，再路由到一个或多个目标消费者</li>
+<li>支持一个或多个协议（AMQP等）进行通信</li>
+<li>通信、协议转换依赖网络带宽和CPU资源</li>
+</ul>
+</li>
+<li>存储层（STORAGE LAYER）
+<ul>
+<li>概念层，负责持久化和获取消息</li>
+<li>直接为服务层提供请求的消息</li>
+<li>维持消息的顺序</li>
+<li>依赖磁盘资源存储消息</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure-1.5.jpeg" alt="Figure 1.5" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="17" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.2 面向消息的中间件</h2>
+<div class=ldiv>
+<ul>
+<li>第一类消息系统，又被称作 <code>message-oriented-middleware (MOM)</code>，用于提供进程间通信以及分布式系统集成</li>
+<li>最早的实现是1993年首次亮相的 <code>IBM WebSphere MQ</code> ，它是在单个大型机上部署的</li>
+<li>缺点：单点故障风险，系统的可扩展性受到了单个物理机硬件能力限制
+<ul>
+<li>网卡带宽限制了同时处理的生产者和消费者数量</li>
+<li>物理磁盘大小限制了存储容量</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.6.jpeg" alt="Figure1.6" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="18" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.2 面向消息的中间件</h2>
+<div class=ldiv>
+<ul>
+<li>集群化
+<ul>
+<li>通过负载均衡将topic打散到每个实例，解决扩展性问题</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>每个实例仅能处理、存储所有topic中的部分子集</li>
+<li>热点topic仍会使得对应节点出现瓶颈、存储不足</li>
+<li>任何一个节点故障，仍会造成它所负责的topic无法正常服务。虽然减小了影响范围，但是对这些topic来说仍然存在单点故障</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.7.png" alt="Figure1.7" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="19" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.3 企业消息总线ESB</h2>
+<div class=ldiv>
+<ul>
+<li>本世纪初出现，彼时XML还是首推的消息格式，用于实现SOA应用</li>
+<li>核心概念是消息总线，它采用<strong>集中式架构</strong>，是所有应用和服务之间的通信通道</li>
+<li>发送和消费需要指定topic，都通过单个通信通道实现</li>
+<li>消费者将自己注册到ESB上，并且通过规则集合指定监听的消息</li>
+<li>发送者不需要知道消息的接收方，只需要把消息发送到总线即可</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.8.png" alt="Figure1.8" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="20" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.3 企业消息总线ESB</h2>
+<div class=ldiv>
+<ul>
+<li>流处理：<strong>消息系统自己可以对消息进行处理</strong>，而不再需要消费者应用执行这些任务
+<ul>
+<li>消息转换服务：通过XSLT、XQuery在发送者和消费者之间进行格式转换</li>
+<li>消息增强和处理能力</li>
+</ul>
+</li>
+<li>可以认为ESB是首次在消息系统的基础架构上引入了第三层——计算层</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.9.png" alt="Figure1.9" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="21" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.3 企业消息总线ESB</h2>
+<div class=ldiv>
+<ul>
+<li>ESB的另一个特点——强调与外部系统的集成，对消息系统的演进意义重大</li>
+<li>可以认为是ESB消息系统首次支持了多种非消息协议
+<ul>
+<li>Email</li>
+<li>数据库</li>
+<li>其他第三方系统等</li>
+</ul>
+</li>
+<li>ESB提供了SDK，开发者通过实现适配器将其与自己的系统集成</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.10.png" alt="Figure1.10" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="22" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统</h2>
+<div class=ldiv>
+<ul>
+<li>介绍
+<ul>
+<li>一组通过协作提供服务（例如文件系统、key-value存储、数据库等）的实例</li>
+<li>对终端用户来说无感，就像是一个实例一样</li>
+<li>可以容忍硬件故障而不影响整个系统的可用性</li>
+</ul>
+</li>
+<li>收益
+<ul>
+<li>不再受单机性能的限制</li>
+<li>可以通过加机器的方式提升集群的性能</li>
+</ul>
+</li>
+<li>新的消息系统，像Apache Kafka、Apache Pulsar都采用了这种分布式计算模型</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.11.png" alt="" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="23" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统</h2>
+<div class=ldiv>
+<ul>
+<li>一个topic可以分布于多个集群，可水平扩展，还可通过冗余实现数据的高可用等</li>
+<li>分布式消息系统与节点集群化系统的区别：
+<ul>
+<li>单节点系统中每个topic只能存储在一台机器的磁盘上，大小受磁盘容量限制</li>
+<li>分布式消息系统中每个topic保存在多个机器上，topic大小可以超过单个机器的容量限制</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.11.png" alt="" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="24" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统</h2>
+<div class=ldiv>
+<ul>
+<li>数据分布式存储能力
+<ul>
+<li>关键的架构抽象是“write-ahead-log”，它将消息队列的内容看作是只能追加的数据结构</li>
+</ul>
+</li>
+<li>优点：
+<ul>
+<li>相比之前的消息系统提供了扩展性更好的存储层</li>
+<li>多个broker可以为同一个topic提供服务，提高了生产和消费的吞吐量</li>
+</ul>
+</li>
+<li>如图所示：一个topic的消息可以分散到3个不同的broker上，这样可以提供更高的写入速率</li>
+<li>有两种不同的分布式数据存储策略
+<ul>
+<li>基于分区的存储：partition-based</li>
+<li>基于分段的存储：segment-based</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.12.png" alt="Figure1.12" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="25" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统-分区存储</h2>
+<div class=ldiv>
+<ul>
+<li>kafka中基于分区的存储实现
+<ul>
+<li>topic被分割成固定数量、相同大小的组（称为分区）</li>
+<li>数据被分发到每一个分区</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>topic的总容量等于分区数乘以分区大小，超过该容量后就不能再写入数据</li>
+<li>仅增加broker数量无法解决上述问题，因为还需要增加分区的数量</li>
+<li>增加分区数量需要执行重平衡，它的代价比较大并且很耗时</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.13.png" alt="" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="26" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统-分区存储</h2>
+<div class=ldiv>
+<ul>
+<li>特点
+<ul>
+<li>当创建系统的时候分区的数量就已经决定了，这使得系统可以决定哪个节点存储哪些分区</li>
+</ul>
+</li>
+<li>预先确定分区的数量的副作用
+<ul>
+<li>一个分区只能存储在集群中的一个节点上，因此分区的大小受到该节点磁盘剩余空间大小的限制</li>
+<li>因为数据平均分布于所有的分区，所以可用分区的大小等于该topic下最小的分区大小</li>
+<li>尽管不是严格要求，通常情况下每一个分区会在其他节点上复制多个副本，因此分区的最大空间要小于最小的那个副本</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.13.png" alt="Figure1.13" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="27" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统-分区存储</h2>
+<div class=ldiv>
+<ul>
+<li>扩容方案
+<ul>
+<li>一旦你遇到容量不足的情况，唯一的解决方案是<strong>增加topic的分区数量</strong></li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>扩容过程中需要对整个topic进行<strong>重平衡</strong>，topic已有的数据需要重新分配到所有的分区上，以便从现有节点的磁盘上释放出空间</li>
+<li>重新分配<strong>复制数据</strong>代价极大并且容易出错，它消耗的网络带宽和磁盘io与topic的大小成比例</li>
+<li>只有<strong>当重平衡完成</strong>且原来的数据已经删除后，该topic才能够对外提供服务</li>
+</ul>
+</li>
+<li>数据容灾
+<ul>
+<li>默认的副本数量设置是3，即每一条消息会保存3份拷贝</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.14.png" alt="Figure1.14" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="28" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.3.4 分布式消息系统-分段存储</h2>
+<div class=ldiv>
+<ul>
+<li>Pulsar依赖Apache BookKeeper提供消息的持久化存储</li>
+<li>BookKeeper的逻辑存储模型是基于存储为顺序日志的无界流概念</li>
+<li>BookKeeper的每一个日志都被拆成小的数据块，它由多个log项组成，被称为segment</li>
+<li>segment可以保存在存储层的任意位置，只要有足够的磁盘空间即可</li>
+<li>一个关键的优势：可以水平扩展，因为segment可以存储在任意位置</li>
+<li>而基于分区的存储在垂直和水平扩展方面都有限制</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.15.png" alt="Figure1.15" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="29" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4 与Apache Kafka的对比</h2>
+
+<ul>
+<li>相同点
+<ul>
+<li>有相似的消息概念</li>
+<li>client和系统之间通过topic交互，逻辑上可以认为是无界的、append-only的数据流</li>
+</ul>
+</li>
+<li>不同点
+<ul>
+<li>可扩展性</li>
+<li>消息的消费</li>
+<li>数据的持久性</li>
+<li>消息的保存策略</li>
+</ul>
+</li>
+</ul>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="30" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.1 多层架构</h2>
+<div class=ldiv>
+<ul>
+<li>分层的对比
+<ul>
+<li>Pulsar的多层架构将消息服务层和消息存储层完全解耦，它们可以独立地扩展</li>
+<li>Kafka则是将数据处理、存储合并到同一个集群节点或实例上</li>
+</ul>
+</li>
+<li>Kafka特点
+<ul>
+<li>优势：架构简单，性能上有优势（减少了数据在网络上的传输）</li>
+<li>代价：影响了扩展性、弹性和运营</li>
+</ul>
+</li>
+<li>Pulsar特点
+<ul>
+<li>broker: 数据服务层，无状态节点</li>
+<li>bookie: 数据存储层，负责消息数据存储</li>
+<li>优势：动态扩展、无停机升级、无限存储、容器友好</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.16.png" alt="Figure1.16" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="31" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.1 多层架构-动态扩缩容</h2>
+<div class=ldiv>
+<ul>
+<li>举例：CPU密集型的服务在请求超过一定阈值后性能开始下降，需要水平扩容，例如添加新的机器来分担请求流量</li>
+<li>基于对CPU/内存等指标的监控统计数据，实现基础设施的自动扩缩容</li>
+<li>自动扩缩容对比
+<ul>
+<li>服务层无状态的broker可以在高峰期自动扩容，在高峰期之后自动缩容</li>
+<li>Kafka在高峰期后无法缩容，因为这些节点的硬盘上还存储着消息数据，在缩容前需要确保数据已经处理完或移动到集群中的其他节点上</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.16.png" alt="Figure1.16" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="32" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.1 多层架构-动态扩缩容</h2>
+<div class=ldiv>
+<ul>
+<li>应对流量尖刺
+<ul>
+<li>Kafka的broker只能为其硬盘上存储的数据提供服务，这使得新添加的节点只能处理写请求，无数据可提供读请求</li>
+<li>Pulsar新添加的broker节点可以处理针对所有数据的读写请求</li>
+</ul>
+</li>
+<li>扩容限制
+<ul>
+<li>针对仅计算能力或存储能力不足的场景，Kafka不能单独进行扩容，它只能同时扩容CPU计算能力和硬盘存储能力</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.16.png" alt="Figure1.16" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="33" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.1 多层架构-自动恢复</h2>
+<div class=ldiv>
+<ul>
+<li>broker节点是无状态的，可以直接使用新的实例进行替换，无需中断服务或进行数据迁移</li>
+<li>对于存储层而言，数据采用多副本跨节点存储，因此当出现故障时可以直接使用新节点进行替换</li>
+<li>得益于云服务提供的自动扩缩容机制，在这两种场景下pulsar都可以确保最小数量的节点在运行</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.16.png" alt="Figure1.16" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="34" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.2 消息的消费-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>所有的消费者都属于特定的消费组，消费组是topic的逻辑订阅者</li>
+<li>每一个消费组都包含多个消费者，用于支持扩展和失败恢复。一个消费者出现故障其余的消费者会取代之</li>
+<li>消费实现的方式是把消息记录按照分区分配给消费者，在任一时刻每一个分区都只会对应一个消费者</li>
+<li>如果消费组里的消费者数量小于分区数，那么某些消息者会分配到多个分区</li>
+<li>如果消费者数量超过分区数，那么超出的消费者会分配不到分区，只有在其他消费者出现故障时才有可能获取到分区</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.17.png" alt="Figure1.17" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="35" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.2 消息的消费-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>创建“排他性”消费者的副作用
+<ul>
+<li>在一个消费组内，活跃的消费者数不能超过该topic的分区数</li>
+</ul>
+</li>
+<li>问题
+<ul>
+<li>只能通过添加消费者来扩充消费能力</li>
+<li>这限制了最大并行度为分区的数量</li>
+<li>当消费速度跟不上生产速度时，这也限制了数据消费扩容的能力</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.17.png" alt="Figure1.17" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="36" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.2 消息的消费-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>kafka仅提供分区内的有序性，而不保证分区间的顺序</li>
+<li>消费组以集群的形式提供扩展性和失败容忍性，这意味着它能动态地新增或移除消费组</li>
+<li>当一个新的消费者添加到消费组时，它会获取到一个原属于另一个消费者的分区，然后开始消费</li>
+<li>反之，移除消费者时则会将分区交给另一个消费者</li>
+<li>这种分区所属权洗牌的过程叫做rebalancing，它可能会产生预期之外的结果，例如rebalancing时未保存offset导致的潜在的数据丢失</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.17.png" alt="Figure1.17" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="37" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.2 消息的消费-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>多应用不同消费需求场景，每个应用使用一个消费组
+<ul>
+<li>并行消费：多分区保证消费的并行度</li>
+<li>顺序消费：单分区确保有序性</li>
+<li>特殊字段分区：每个分区数据易于统计</li>
+</ul>
+</li>
+<li>解决方案
+<ul>
+<li>kafka单个分区无法支持，需要创建多个topic，数据存储多份</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.17.png" alt="Figure1.17" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="38" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.3 数据的持久性-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>数据持久性(Durability)
+<ul>
+<li>已经收到ack的消息，即使在系统出现故障的情况下，也可以保证数据不丢失</li>
+<li>方案：根据配置的数据冗余级别，需要为每一个分区维护多个副本</li>
+</ul>
+</li>
+<li>处理流程
+<ul>
+<li>通过hash函数计算每个消息应该发送到哪个分区</li>
+<li>消息内容会直接写入到leader的page cache中（不是磁盘上）</li>
+<li>leader回复完ack后，follower会从leader拉取消息内容</li>
+</ul>
+</li>
+<li>最终一致性
+<ul>
+<li>在分布式系统中，有一个节点拥有数据的最新视图，这些数据会同步给其他节点，最终会达到一个一致的数据视图(view of the data)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.18.png" alt="Figure1.18" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="39" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.3 数据的持久性-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>仍然有两个场景会导致数据丢失
+<ul>
+<li>leader节点断电或者被其他进程结束：所有已写入到page cache并且未持久化到磁盘的数据会丢失</li>
+<li>leader故障：一个follower被选举为新的leader，故障前还未复制到该follower的数据会丢失</li>
+</ul>
+</li>
+<li>Kafka的方案
+<ul>
+<li>提供配置ack策略的能力，当leader同步副本完成后回复ack，甚至选择等所有副本都收到消息后再回复ack</li>
+</ul>
+</li>
+<li>缺点及建议
+<ul>
+<li>这种策略会增加性能损耗，然而大多数kafka性能测试会避开这点，因此建议你自己根据实际配置进行性能测试</li>
+<li>只有leader可以为生产者、消费者提供服务，因为只有它拥有最新的数据</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.18.png" alt="Figure1.18" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="40" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.3 数据的持久性-Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li>Pulsar在收到一条消息时会在内存中保存一个副本，并且会将其<strong>写入WAL</strong>。在给生产者回复ack之前会强制将WAL<strong>写到磁盘</strong>上</li>
+<li>这种方式参考了传统关系数据库的<strong>ACID语义</strong>，可以保证即使机器故障数据也不会丢失</li>
+<li>每个topic需要的副本数量是可配置的，pulsar会确保<strong>quorum数量的节点</strong>收到数据并且通知到leader，然后再给生产者发送ack</li>
+<li>这种设计确保了数据不会丢失，除非所有写入数据的bookie节点<strong>同时发生严重错误</strong></li>
+<li>不需要专门的同步线程去复制数据，这种机制也保证了多副本间的数据一致性</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.19.png" alt="Figure1.19" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="41" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.4 消息的ACK</h2>
+<div class=ldiv>
+<ul>
+<li>在分布式消息系统中，失败总是难免的，包括消费者消费消息、broker提供消息都可能失败</li>
+<li>当出现上述情况后，一旦系统恢复，最终要的是消费者要从上次的消费位点开始消费，确保不会跳过或重新消费消息</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="42" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.4 消息的ACK-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>kafka中的恢复点和消费<strong>偏移量</strong>有关，它<strong>由消费者控制</strong></li>
+<li>仅仅将偏移量保存在消费组的内存中是比较危险的，因此还会将其保存在一个叫做 <code>__consumer_offsets</code> 的单独topic中</li>
+<li>kafka消费者默认<strong>每5s提交一次offset</strong></li>
+<li>kafka还提供了一个提交当前消费偏移量的api，开发者可以<strong>自己选择提交的时机</strong></li>
+<li>每次消费后提交的缺点
+<ul>
+<li>增加了开发者的负担</li>
+<li>增加了消费延迟（每次处理完消息需要提交ack并且等待确认）</li>
+</ul>
+</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="43" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.4 消息的ACK-Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li>Pulsar通过BookKeeper为每一个订阅者维护了一个ledger，它被称作cursor ledger，用于跟踪消息ack</li>
+<li>处理流程
+<ul>
+<li>消费者处理完一条消息后会给broker发送ack</li>
+<li>在收到ack后，broker会立即更新cursor ledger</li>
+<li>这些信息已经在多个bookie节点上落盘</li>
+<li>因为这些ack信息已经存储到了磁盘上，即使消费者之后crash或者重启，它也不会重复收到之前的消息</li>
+</ul>
+</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="44" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.4 消息的ACK-Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li>Pulsar支持两种ack方式，<strong>选择性ack</strong>和<strong>累积式ack</strong></li>
+<li><strong>累积式ack</strong>只需要对最新的消息回复ack即可，它与Kafka的offset更新一样高效</li>
+<li>Pulsar相比Kafka的区别在于消费者能够单独确认消息，也就是<strong>选择性ack</strong>。它允许在单个消费者失败的情况下重新投递消息</li>
+<li>如右图所示，消费者只成功处理了<strong>消息4和消息7</strong>：
+<ul>
+<li>Pulsar消费者可以<strong>单独针对4和7发送ack</strong>。消费者重启后所有未处理的消息<strong>均会重新投递</strong></li>
+<li>Kafka的offset更新策略只能把消费组的offset<strong>更新为高水位7</strong>。在消费者重启后从消息8开始消费，<strong>跳过了消息1、2、3、5、6</strong></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.20.png" alt="Figure1.20" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="45" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.5 消息的留存</h2>
+<div class=ldiv>
+<ul>
+<li>传统消息系统(例如ActiveMQ)在收到消息ACK后会立即将其从系统中删除，其目的是为了尽快回收占用的磁盘空间</li>
+<li>分布式消息系统中通过水平扩展缓解了磁盘容量问题，但仍提供了回收磁盘空间的机制</li>
+<li>需要理解这种自动删除消息的机制，因为如果配置不当，仍会导致消息丢失</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="46" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.5 消息的留存-Kafka</h2>
+<div class=ldiv>
+<ul>
+<li>Kafka可以配置发送到topic里的消息保存周期</li>
+<li>例如配置的周期是7天
+<ul>
+<li>发送到topic的消息在7天内可以用于消费</li>
+<li>超过7天的消息会被清理掉</li>
+</ul>
+</li>
+<li>过期时间一到，不管消息有没被消费、ack，系统都会直接将其删除</li>
+<li>缺点
+<ul>
+<li>如果配置的周期小于所有消费者消费消息所需的时间，那么就可能导致数据丢失。例如消费系统的长期停机的情况</li>
+<li>消息的保存时间有很大概率超过实际需求，从而降低存储空间的利用率</li>
+</ul>
+</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="47" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.4.5 消息的留存-Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li>Pulsar默认会在收到所有消费者的ack后立即删除消息，未收到ack的消息会保留在消息的backlog中</li>
+<li>只有当所有的订阅者都消费后才会删除消息</li>
+<li>如果需要在所有消费者都消费之后继续保存，还可以通过配置消息保存周期实现</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-64" data-theme="am_blue" class="cols-2-64" data-marpit-pagination="48" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-64;--theme:am_blue;" data-size="16:9">
+<h2>1.5 为什么我需要Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li><strong>有保障的消息投递</strong></li>
+<li><strong>无限的可扩展性</strong>
+<ul>
+<li>无缝集群扩展。broker会自动识别添加到存储层的bookie节点并将其用于存储消息。</li>
+<li>不受限制的topic分区存储。topic分区大小不受最小节点的容量限制。</li>
+<li>无需数据重平衡的实时扩缩容。将topic的分区从一个broker移到另一个broker时无需进行数据重平衡</li>
+</ul>
+</li>
+<li><strong>故障恢复</strong>
+<ul>
+<li>broker故障无缝恢复。broker无状态，故障时可以直接切换到其他的broker，无需对数据进行复制。</li>
+<li>bookie故障无缝恢复。基于segment的存储，每个消息在ack前会创建N个磁盘副本。节点自愈能力，segment维度多对多快速修复。</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.21.png" alt="Figure1.21" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2" data-theme="am_blue" class="cols-2" data-marpit-pagination="49" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2;--theme:am_blue;" data-size="16:9">
+<h2>1.5 为什么我需要Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li>支持百万级的topic
+<ul>
+<li>根据经验，在Kafka中，如果你关心延迟性能，你应该将topic分区的总数保持在数百个以内</li>
+<li>Pulsar可以支持280万个topic并且性能不受影响</li>
+<li>Pulsar会将来自不同topic的消息聚合、排序并且存储在一个大的文件内，然后为其建立索引</li>
+</ul>
+</li>
+<li>两地复制和故障切换
+<ul>
+<li>同一个集群内同步复制，多个集群之间异步复制</li>
+<li>开启异步geo-replication时，生产者不需要等待消息复制到其他数据中心。缺点：数据的弱一致性</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.22.png" alt="Figure1.22" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2" data-theme="am_blue" class="cols-2" data-marpit-pagination="50" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2;--theme:am_blue;" data-size="16:9">
+<h2>1.5 为什么我需要Pulsar</h2>
+<div class=ldiv>
+<ul>
+<li>同步geo-replication
+<ul>
+<li>需要确保大多数数据中心已经将消息持久化到磁盘后才能回复ACK</li>
+<li>提供数据的强一致性，每一个数据中心都可以对外提供服务</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class=rimg>
+<p><img src="attachments/PulsarInAction-Figure1.23.png" alt="Figure1.23" /></p>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="51" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1.6 真实案例</h2>
+<div class=ldiv>
+<ul>
+<li>统一的消息系统：智联招聘将两个不同的消息系统（队列、发布订阅）进行整合</li>
+<li>微服务平台：Narvar使用Pulsar对现有微服务系统进行改造</li>
+<li>联网汽车：北美的汽车制造商基于Pulsar构建了联网汽车服务</li>
+<li>欺诈检测：金融科技公司每天都面临大量金融欺诈，寻求统一数据存储、计算引擎和程序语言的风控系统开发方案。</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="52" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1.7 其他资源</h2>
+<div class=ldiv>
+<ul>
+<li>官网
+<ul>
+<li><a href="http://pulsar.apache.org">Apache Pulsar | Apache Pulsar</a></li>
+</ul>
+</li>
+<li>博客
+<ul>
+<li><a href="https://www.splunk.com/en_us/blog/search.html?query=Pulsar">Search Results | Splunk</a></li>
+<li><a href="https://streamnative.io/blog">StreamNative Blog: Insights on Cloud-Native Streaming and Messaging Solutions</a></li>
+</ul>
+</li>
+<li>Tutorials
+<ul>
+<li><a href="https://streamnative.io/docs/v1.0.0/process/pulsar-spark-connector/tutorial/#app">StreamNative - Docs</a></li>
+</ul>
+</li>
+<li>slack
+<ul>
+<li><a href="https://apache-pulsar.slack.com/">Site Unreachable</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-paginate="true" data-footer=" *Pulsar In Action*" data-class="cols-2-73" data-theme="am_blue" class="cols-2-73" data-marpit-pagination="53" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--class:cols-2-73;--theme:am_blue;" data-size="16:9">
+<h2>1.8 总结</h2>
+<div class=ldiv>
+<ul>
+<li>Pulsar是一个现代化的消息系统，它同时支持高性能的流处理和传统的队列消息</li>
+<li>Pulsar提供了一个轻量级的计算引擎——Pulsar Functions，可以用于实现简单的处理逻辑</li>
+<li>Pulsar将存储层和服务层解耦的优势：无限的扩展能力、零数据丢失</li>
+<li>讨论了Pulsar在生产环境中的案例，包括IoT分析、微服务内部通信以及统一的消息系统</li>
+</ul>
+</div>
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-footer=" *Pulsar In Action*" data-theme="am_blue" data-marpit-pagination="54" data-marpit-pagination-total="54" style="--paginate:true;--footer: *Pulsar In Action*;--theme:am_blue;" data-size="16:9">
+<footer> <em>Pulsar In Action</em></footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{constructor(){super(),this.svgPreserveAspectRatio="xMinYMid meet";const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){var t,s,o,r,a;this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=null!==(t=this.shadowRoot.querySelector(`div[${e}]`))&&void 0!==t?t:void 0;const l=this.svg;this.svg=null!==(o=null===(s=this.wrapper)||void 0===s?void 0:s.querySelector(`svg[${i}]`))&&void 0!==o?o:void 0,this.svg!==l&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=null!==(a=null===(r=this.svg)||void 0===r?void 0:r.querySelector(`span[${n}]`))&&void 0!==a?a:void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){var t,e,i,n,s,o,r;let a=Math.ceil(null!==(e=null===(t=this.containerSize)||void 0===t?void 0:t.width)&&void 0!==e?e:0);const l=Math.ceil(null!==(n=null===(i=this.containerSize)||void 0===i?void 0:i.height)&&void 0!==n?n:0);void 0!==this.dataset.downscaleOnly&&(a=Math.max(a,null!==(o=null===(s=this.wrapperSize)||void 0===s?void 0:s.width)&&void 0!==o?o:0));const c=null===(r=this.svg)||void 0===r?void 0:r.querySelector(":scope > foreignObject");if(null==c||c.setAttribute("width",`${a}`),null==c||c.setAttribute("height",`${l}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${a} ${l}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=a<=0||l<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const o=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this.attachShadow({mode:"open"})}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_update(){const t=i?`<style>:host { ${i} }</style>`:"";let e="<slot></slot>";const{autoScaling:n}=this.dataset;if(void 0!==n){e=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===n?"data-downscale-only":""}>${e}</marp-auto-scaling>`}this.shadowRoot.innerHTML=t+e}};let r;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),g=Symbol();const h=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,o,r;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(r=null===(o=n.y)||void 0===o?void 0:o.baseVal.value)&&void 0!==r?r:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await h()}finally{s=!0}})();const o=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(o)};return o(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const b=Symbol(),w=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();null!=r||(r=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is")),r&&a!==HTMLElement?i||customElements.define(s,o(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,o(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[b])return e[b];const i=v({target:e}),n=()=>{i(),delete e[b]},l=Object.assign(n,{cleanup:n,update:()=>w(e)});return Object.defineProperty(e,b,{configurable:!0,value:l}),l},y=document.currentScript;w(y?y.getRootNode():document)}();
+</script></foreignObject></svg></body></html>
